@@ -6,7 +6,7 @@ async function updateCounter() {
     "https://rergvakopvnrdob2bi4cxo6ftu0ncujn.lambda-url.eu-west-2.on.aws/"
   );
   let value = await res.json();
-  counterValue.innerHTML = value;
+  counterValue.innerHTML = ` ${value}`;
 }
 
 updateCounter();
