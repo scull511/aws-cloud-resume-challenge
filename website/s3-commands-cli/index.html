@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Cull - CV</title>
+
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/all-projects.css">
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="../assets/responsive.css">
+</head>
+  <body id="top">
+    <header>
+      <h1>S3 Commands in the AWS CLI</h1>
+      <img src="../assets/images/banner.jpg" alt="">
+    </header>
+    <aside>
+      <div id="section-1" class="section">
+        <div class="aside-section-content">
+          <div class="aside-content-name-title">
+            <h3>Simon Cull</h3>
+            <span><em>AWS Cloud Engineer</em></span>
+          </div>
+          <div class="content-div-container">
+            <div id="content-div-1" class="content-div">
+              <a href="tel:+447974410248"> 07974 410248 </a>
+            </div>
+            <div id="content-div-2" class="content-div">
+              <a href="mailto:simoncull@gmail.com"> simoncull@gmail.com </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section-2" class="section">
+        <div class="aside-menu">
+          <a href="../">
+            <div class="aside-menu-item" id="homeBtn">
+              Home
+            </div>
+          </a>
+          <div class="aside-menu-item" id="projectsBtn">
+            Projects
+          </div>
+          <div class="aside-menu-item" id="topBtn">
+            Back to Top
+          </div>
+        </div>
+      </div>
+      <div id="section-3" class="section">
+        <div id="socialIcons"></div>
+        <div id="counter">
+          VIEW COUNT:<span id="counter-value">&nbsp;3000</span>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div id="overlay">
+        <img id="overlay-img" src="" alt="" />
+        <div id="overlay-img-btns">
+          <div id="overlay-img-btn-back" class="overlay-img-btn">&#8592;</div>
+          <div id="overlay-img-btn-forwards" class="overlay-img-btn">&#8594;</div>
+          <div id="overlay-img-btn-close" class="overlay-img-btn">CLOSE</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="current-project-row">
+          <!-- <h3 class="sub-title-span">
+            S3 Commands in the AWS Command Line Interface
+          </h3> -->
+          <div class="text-passages">
+            <p class="project-summary">
+              I used the AWS CLI to carry out various operations on Amazon S3
+              buckets and objects. These operations included tasks such as
+              copying from one bucket to another, filtering objects, syncing
+              folders, and generating a presigned URL – a secure method for
+              providing temporary, controlled access to files for individuals
+              without AWS credentials.
+            </p>
+          </div>
+
+          <ol id="project-list">
+            <li>
+              <span>Created first S3 bucket - cli-bucket-1234</span>
+              <div class="imgCont">
+                <img src="project-images/01.png" class="rows-2" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Listed S3 buckets</span>
+              <div class="imgCont">
+                <img src="project-images/02.png" class="rows-2" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Created text file locally</span>
+              <div class="imgCont">
+                <img src="project-images/03.png" class="rows-2" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Used nano to edit file</span>
+              <div class="imgCont">
+                <img src="project-images/04.png" class="rows-7" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Copied file from local drive to bucket one</span>
+              <div class="twoImgCont">
+                <img src="project-images/05.png" class="rows-2" alt="" />
+                <img src="project-images/05_01.png" class="rows-2" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Created second S3 bucket - cli-bucket-5678</span>
+              <div class="imgCont">
+                <img src="project-images/06.png" class="rows-2" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Listed S3 buckets to show both created</span>
+              <div class="imgCont">
+                <img src="project-images/07.png" class="rows-3" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Copied file from bucket one to bucket two</span>
+              <div class="imgCont">
+                <img src="project-images/08.png" class="rows-6" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Copied file from bucket one to local drive</span>
+              <div class="twoImgCont">
+                <img src="project-images/09.png" class="rows-2" alt="" />
+                <img src="project-images/09_01.png" class="rows-8" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Listed contents of local drive to show files</span>
+              <div class="imgCont">
+                <img src="project-images/10.png" class="rows-3" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >Created a folder locally and created three files inside
+                folder</span
+              >
+              <div class="imgCont">
+                <img src="project-images/11.png" class="rows-5" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >Used sync to copy the folder and files from local drive to
+                bucket one</span
+              >
+              <div class="imgCont">
+                <img src="project-images/12.png" class="rows-4" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Listed the items in the folder in the bucket</span>
+              <div class="imgCont">
+                <img src="project-images/13.png" class="rows-9" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >Used the '--recursive' parameter to delete the files in the
+                folder, 'recursive' for repeated application of delete</span
+              >
+              <div class="imgCont">
+                <img src="project-images/14.png" class="rows-22" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >Created a new folder locally and created four files, three
+                with the extension 'txt' and one with the extension
+                'rtb'</span
+              >
+              <div class="imgCont">
+                <img src="project-images/15.png" class="rows-5" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >Uploaded the files to the bucket, but used a filter to
+                exclude all files with the extension 'rtb' from the
+                upload</span
+              >
+              <div class="imgCont">
+                <img src="project-images/16.png" class="rows-8" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Created a file locally</span>
+              <div class="imgCont">
+                <img src="project-images/17.png" class="rows-1" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >Copied that file to the S3 bucket, passing a parameter to
+                define which storage class to use - Standard - Infrequent
+                Access</span
+              >
+              <div class="imgCont">
+                <img src="project-images/18.png" class="rows-1" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >Displayed the file, using the console, in the bucket,
+                displaying the storage class</span
+              >
+              <div class="imgCont noInvert">
+                <img src="project-images/19.png" class="rows-12" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>Created a new file, uploaded it to the bucket</span>
+              <div class="imgCont">
+                <img src="project-images/20.png" class="rows-4" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >Created a presigned URL, granting time-limited permission to
+                an object using the security credentials of the AWS user who
+                generated the URL</span
+              >
+              <div class="imgCont">
+                <img src="project-images/21.png" class="rows-5" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >The presigned URL returned in the CLI - a secure web link for
+                sharing</span
+              >
+              <div class="imgCont">
+                <img src="project-images/22.png" class="rows-3" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >The file displayed in the browser. Just says 'hello world',
+                of course, how exciting</span
+              >
+              <div class="imgCont noInvert">
+                <img src="project-images/23.png" class="rows-6" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >Deleted bucket... but you can't delete a bucket with objects
+                in</span
+              >
+              <div class="imgCont">
+                <img src="project-images/24.png" class="rows-3" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span
+                >If you use the parameter '--force', you can delete a bucket
+                with objects in
+              </span>
+              <div class="imgCont">
+                <img src="project-images/25.png" class="rows-12" alt="" />
+              </div>
+            </li>
+          </ol>
+        </div>
+      
+        <div class="projects-row" id="projects">
+          <h3 class="sub-title-span">Projects</h3>
+          <div class="projects-container">
+            <a href="../cloud-resume-challenge/index.html">
+              <div class="project-container" id="project-container-1">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Cloud Resume Challenge</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/S3.png" alt="S3" title="S3" />
+                    <img src="../assets/aws-icons/CloudFront.png" alt="CloudFront" title="CloudFront" />
+                    <img src="../assets/aws-icons/github-mark.png" style="background-color: #FFF;" alt="GitHub" title="GitHub" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                    <img src="../assets/aws-icons/Route53.png" alt="Route53.png" title="Route53.png" />
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../two-tier-terraform/index.html">
+              <div class="project-container" id="project-container-2">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Two-Tier Web Application Architecture built using Terraform</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancer" title="Elastic Load Balancer" />
+                    <img src="../assets/aws-icons/RDS.png" alt="RDS" title="RDS" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../serverless-web-app/index.html">
+              <div class="project-container" id="project-container-3">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Serverless Web Application</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CodeCommit.png" alt="CodeCommit" title="CodeCommit" />
+                    <img src="../assets/aws-icons/Amplify.png" alt="Amplify" title="Amplify" />
+                    <img src="../assets/aws-icons/Cognito.png" alt="Cognito" title="Cognito" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/APIGateway.png" alt="API Gateway" title="API Gateway" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../three-tier-architecture/index.html">
+              <div class="project-container" id="project-container-4">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Three-Tier Web Application Architecture</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/EC2AutoScaling.png" alt="EC2 Auto Scaling" title="EC2 Auto Scaling" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancing" title="Elastic Load Balancing" />
+                    <img src="../assets/aws-icons/RDS.png" alt="Relational Database Service" title="Relational Database Service" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- <a href=""> -->
+              <div class="project-container" id="project-container-5">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">S3 Commands in the AWS Command Line Interface</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CLI.png" alt="" />
+                    <img src="../assets/aws-icons/S3.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            <!-- </a> -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer-content">
+        <div id="copyright-and-year"></div>
+        <div id="built-by">
+          WEBSITE<br />DESIGNED & BUILT<br />BY SIMON CULL
+        </div>
+      </div>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="scroll.js"></script>
+  </body>
+</html>

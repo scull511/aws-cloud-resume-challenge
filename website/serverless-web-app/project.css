@@ -1,0 +1,11 @@
+.project-architecture-img img {
+    height: 350px;
+}
+
+.page-project-image figcaption {
+    font-size: 0.75rem;
+    font-weight: 200;
+    background-color: #d5d5d5;
+    height: 100%;
+    padding: 10px;
+}

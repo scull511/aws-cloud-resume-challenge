@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Cull - CV</title>
+
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/all-projects.css">
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="../assets/responsive.css">
+</head>
+  <body id="top">
+    <header>
+      <img src="../assets/images/banner.jpg" alt="">
+      <h1>Two-Tier Architecture - Terraform</h1>
+    </header>
+    <aside>
+      <div id="section-1" class="section">
+        <div class="aside-section-content">
+          <div class="aside-content-name-title">
+            <h3>Simon Cull</h3>
+            <span><em>AWS Cloud Engineer</em></span>
+          </div>
+          <div class="content-div-container">
+            <div id="content-div-1" class="content-div">
+              <a href="tel:+447974410248"> 07974 410248 </a>
+            </div>
+            <div id="content-div-2" class="content-div">
+              <a href="mailto:simoncull@gmail.com"> simoncull@gmail.com </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section-2" class="section">
+        <div class="aside-menu">
+          <a href="../">
+            <div class="aside-menu-item" id="homeBtn">
+              Home
+            </div>
+          </a>
+          <div class="aside-menu-item" id="projectsBtn">
+            Projects
+          </div>
+          <div class="aside-menu-item" id="topBtn">
+            Back to Top
+          </div>
+        </div>
+      </div>
+      <div id="section-3" class="section">
+        <div id="socialIcons"></div>
+        <div id="counter">
+          VIEW COUNT:<span id="counter-value">&nbsp;3000</span>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div id="overlay">
+        <img id="overlay-img" src="" alt="" />
+        <div id="overlay-img-btns">
+          <div id="overlay-img-btn-back" class="overlay-img-btn">&#8592;</div>
+          <div id="overlay-img-btn-forwards" class="overlay-img-btn">&#8594;</div>
+          <div id="overlay-img-btn-close" class="overlay-img-btn">CLOSE</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="current-project-row">
+          <div class="text-passages">
+            <p>
+              This is a two-tier architecture for deploying web applications
+              on AWS. This setup separates responsibilities between a
+              Presentation tier and a Data tier. This architecture is secure,
+              scalable and fault-tolerant. It also promotes separation of
+              concerns, making development and maintenance easier. In this
+              project, I built the architecture using Terraform.
+            </p>
+            <p>
+              The Presentation tier, or Web Server Tier handles user requests
+              and displays web pages. It has a load balancer to distribute
+              traffic and web servers to display content.
+            </p>
+            <p>
+              The Data Tier stores and manages an application's data. It
+              includes a database server, here an RDS MySQL database. It can
+              also host storage options (such as EBS, S3, or EFS).
+            </p>
+          </div>
+
+          <div class="services-and-image">
+            <div class="project-architecture-img">
+              <img src="twotiertf.png" alt="" />
+            </div>
+            <div class="services-used">
+              <span class="row-title-span"> Services Used </span>
+              <ul class="services-used-ul">
+                <li>EC2</li>
+                <li>Elastic Load Balancing</li>
+                <li>RDS</li>
+                <li>Terraform</li>
+              </ul>
+            </div>
+          </div>
+
+          <ol id="project-list">
+            <li>
+              <span>
+                I created a file named 'provider.tf'. It is here, in a
+                'providers' statement, that you define the provider you want
+                to use and you can configure its settings, such as the AWS
+                region you are working in.
+              </span>
+              <div class="imgCont">
+                <img src="project-images/1.png" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>
+                Next, I created a file with all of the network resources and
+                configurations. These resources included the VPC with a CIDR
+                block, then public subnets, configured to allow public IPs,
+                and private subnets, configured to not allow public IPs. Each
+                subnet has configurations for CIDRs and availability zones.
+                There is also an internet gateway, route tables and route
+                table associations. An Application Load Balancer and a target
+                group for it. And finally a subnet group for the RDS database.
+              </span>
+              <div class="twoImgCont">
+                <img src="project-images/2.png" alt="" />
+                <img src="project-images/3.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span>
+                I created a file for security configurations, including a
+                security group for EC2 instances and a security group for the
+                load balancer. The EC2 instance security group has inbound
+                rules on ports 80 for HTTP access from the internet, and port
+                22 for SSH access from your local machine. There was also a
+                security group for the MySQL database, allowing traffic
+                inbound and outbound on port 3306.
+              </span>
+              <div class="twoImgCont">
+                <img src="project-images/4.png" alt="" />
+                <img src="project-images/5.png" alt="" />
+              </div>
+            </li>
+
+            <li>
+              <span>
+                For the EC2 configuration file, I included the AMI ID of a
+                Linux instance. I included a bash script in the instance user
+                data, to install an NGINX web server on each of the instances.
+              </span>
+              <div class="imgCont">
+                <img src="project-images/6.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span>
+                The Database configuration file includes the standard database
+                configuration, including options such as Storage Type, Engine,
+                username and password, and the DB subnet group configured in
+                the Network file.
+              </span>
+              <div class="imgCont">
+                <img src="project-images/7.png" alt="" />
+              </div>
+            </li>
+          </ol>
+
+          <div class="gallery">
+            <div class="page-project-image-container">
+              <figure class="page-project-image">
+                <img src="project-images/8.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/9.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/10.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/11.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/12.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/13.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/14.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/15.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/16.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/17.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/18.png" title="" alt="" />
+                <figcaption></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-row" id="projects">
+          <h3 class="sub-title-span">Projects</h3>
+          <div class="projects-container">
+            <a href="../cloud-resume-challenge/index.html">
+              <div class="project-container" id="project-container-1">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Cloud Resume Challenge</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/S3.png" alt="S3" title="S3" />
+                    <img src="../assets/aws-icons/CloudFront.png" alt="CloudFront" title="CloudFront" />
+                    <img src="../assets/aws-icons/github-mark.png" style="background-color: #FFF;" alt="GitHub" title="GitHub" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                    <img src="../assets/aws-icons/Route53.png" alt="Route53.png" title="Route53.png" />
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- <a href=""> -->
+              <div class="project-container" id="project-container-2">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Two-Tier Web Application Architecture built using Terraform</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancer" title="Elastic Load Balancer" />
+                    <img src="../assets/aws-icons/RDS.png" alt="RDS" title="RDS" />
+                  </div>
+                </div>
+              </div>
+            <!-- </a> -->
+            <a href="../serverless-web-app/index.html">
+              <div class="project-container" id="project-container-3">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Serverless Web Application</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CodeCommit.png" alt="CodeCommit" title="CodeCommit" />
+                    <img src="../assets/aws-icons/Amplify.png" alt="Amplify" title="Amplify" />
+                    <img src="../assets/aws-icons/Cognito.png" alt="Cognito" title="Cognito" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/APIGateway.png" alt="API Gateway" title="API Gateway" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../three-tier-architecture/index.html">
+              <div class="project-container" id="project-container-4">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Three-Tier Web Application Architecture</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/EC2AutoScaling.png" alt="EC2 Auto Scaling" title="EC2 Auto Scaling" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancing" title="Elastic Load Balancing" />
+                    <img src="../assets/aws-icons/RDS.png" alt="Relational Database Service" title="Relational Database Service" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../s3-commands-cli/index.html">
+              <div class="project-container" id="project-container-5">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">S3 Commands in the AWS Command Line Interface</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CLI.png" alt="" />
+                    <img src="../assets/aws-icons/S3.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer-content">
+        <div id="copyright-and-year"></div>
+        <div id="built-by">
+          WEBSITE<br />DESIGNED & BUILT<br />BY SIMON CULL
+        </div>
+      </div>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="images.js"></script>
+    <script src="scroll.js"></script>
+  </body>
+</html>

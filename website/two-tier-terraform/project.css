@@ -1,0 +1,57 @@
+.project-architecture-img img {
+    height: 400px;
+    padding: 20px;
+    background-color: #FFF;
+}
+
+#project-list li {
+    width: auto;
+    display: grid;
+    grid-auto-rows: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+#project-list li span {
+    background-color: #d5d5d5;
+    border: 1px solid var(--dark);
+    width: auto;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.imgCont {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 15px;
+    padding-left: 20px;
+}
+
+.imgCont img {
+    width: 100%;
+}
+
+.twoImgCont {
+    display: grid;
+    grid-auto-rows: auto;
+    background-color: #1e1e1e;
+    gap: 15px;
+    padding: 15px;
+}
+
+.twoImgCont img {
+    width: 40%;
+}
+
+#project-list {
+    --code-row-height: 15px;
+    display: grid;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 2rem;
+}

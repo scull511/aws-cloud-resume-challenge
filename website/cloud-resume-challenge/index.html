@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Cull - CV</title>
+
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/all-projects.css">
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="../assets/responsive.css">
+</head>
+  <body id="top">
+    <header>
+      <img src="../assets/images/banner.jpg" alt="">
+      <h1>Cloud Resume Challenge</h1>
+    </header>
+    <aside>
+      <div id="section-1" class="section">
+        <div class="aside-section-content">
+          <div class="aside-content-name-title">
+            <h3>Simon Cull</h3>
+            <span><em>AWS Cloud Engineer</em></span>
+          </div>
+          <div class="content-div-container">
+            <div id="content-div-1" class="content-div">
+              <a href="tel:+447974410248"> 07974 410248 </a>
+            </div>
+            <div id="content-div-2" class="content-div">
+              <a href="mailto:simoncull@gmail.com"> simoncull@gmail.com </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section-2" class="section">
+        <div class="aside-menu">
+          <a href="../">
+            <div class="aside-menu-item" id="homeBtn">
+              Home
+            </div>
+          </a>
+          <div class="aside-menu-item" id="projectsBtn">
+            Projects
+          </div>
+          <div class="aside-menu-item" id="topBtn">
+            Back to Top
+          </div>
+        </div>
+      </div>
+      <div id="section-3" class="section">
+        <div id="socialIcons"></div>
+        <div id="counter">
+          VIEW COUNT:<span id="counter-value">&nbsp;3000</span>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div id="overlay">
+        <img id="overlay-img" src="" alt="" />
+        <div id="overlay-img-btns">
+          <div id="overlay-img-btn-back" class="overlay-img-btn">&#8592;</div>
+          <div id="overlay-img-btn-forwards" class="overlay-img-btn">&#8594;</div>
+          <div id="overlay-img-btn-close" class="overlay-img-btn">CLOSE</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="current-project-row">
+          <!-- <h3 class="sub-title-span">
+            S3 Commands in the AWS Command Line Interface
+          </h3> -->
+          <div class="text-passages">
+            <p class="project-summary">
+              CRC summary
+            </p>
+          </div>
+
+          <ol id="project-list">
+            <li>I first designed and created the website with HTML, CSS and JavaScript. I then created an Amazon S3 bucket to store the website files and uploaded the files to the bucket.</li>
+            <li>I used Amazon CloudFront, a content delivery network service. This allows for secure delivery of data over a low-latency HTTPS connnection. When creating the CloudFront distribution, I chose the bucket domain as the origin and used an Origin Access Control policy to grant access to the S3 bucket from the Cloudfront distribution.</li>
+            <li>With CloudFront, I set an alternate domain name (CNAME) as the domain and then requested an SSL certificate from AWS Certificate Manager. In Amazon Route 53, I created a DNS record for this alternative domain name. The record routes traffic to the CloudFront distribution.</li>
+            <li>For the website visitor counter, I created a Dynamo DB table to store the number of views.</li>
+            <li>I created a Lambda function, written using Python, to record each website view. When creating the Lambda, by enabling the function URL you can use that public URL to invoke the Lambda function, rather than using the API Gateway. The function then uses 'get_item' to retrieve the current 'view' value from the database table, increments the value by 1, and then uses 'put_item' to record the updated value to the database table.
+            </li>
+            <li>To display the view count, I created a JavaScript function which used a fetch request to call the Lambda function - so all of the above steps were performed, and the view count was then displayed on the web page.</li>
+            <li>TERRAFORM OR SAM      ############# REORDER, PUT IT HERE</li>
+            <li></li>
+            <li></li>
+            <li>Source Control - Created a GitHub repository</li>
+            <li>
+              <!-- <pre>
+                git init
+                git add .
+                git commit -m "first commit
+                git branch -M main
+                git remote add origin https://github.com/scull511/aws-cloud-resume-challenge.git
+                git push -u origin main
+              </pre> -->
+              <span>######### ADD README file with descripton, diagram, services used etc</span>
+            </li>
+            <li>CI/CD Pipeline using GitHub Actions</li>
+            
+
+            <!-- 
+              TAKE SCREENSHOTS FOR DIFFERENT THINGS
+            -->
+          </ol>
+                <!-- 1. Got a certification or 4. -->
+      
+        <div class="projects-row" id="projects">
+          <h3 class="sub-title-span">Projects</h3>
+          <div class="projects-container">
+            <!-- <a href=""> -->
+              <div class="project-container" id="project-container-1">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Cloud Resume Challenge</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/S3.png" alt="S3" title="S3" />
+                    <img src="../assets/aws-icons/CloudFront.png" alt="CloudFront" title="CloudFront" />
+                    <img src="../assets/aws-icons/github-mark.png" style="background-color: #FFF;" alt="GitHub" title="GitHub" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                    <img src="../assets/aws-icons/Route53.png" alt="Route53.png" title="Route53.png" />
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                  </div>
+                </div>
+              </div>
+            <!-- </a> -->
+            <a href="../two-tier-terraform/index.html">
+              <div class="project-container" id="project-container-2">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Two-Tier Web Application Architecture built using Terraform</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancer" title="Elastic Load Balancer" />
+                    <img src="../assets/aws-icons/RDS.png" alt="RDS" title="RDS" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../serverless-web-app/index.html">
+              <div class="project-container" id="project-container-3">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Serverless Web Application</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CodeCommit.png" alt="CodeCommit" title="CodeCommit" />
+                    <img src="../assets/aws-icons/Amplify.png" alt="Amplify" title="Amplify" />
+                    <img src="../assets/aws-icons/Cognito.png" alt="Cognito" title="Cognito" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/APIGateway.png" alt="API Gateway" title="API Gateway" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../three-tier-architecture/index.html">
+              <div class="project-container" id="project-container-4">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Three-Tier Web Application Architecture</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/EC2AutoScaling.png" alt="EC2 Auto Scaling" title="EC2 Auto Scaling" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancing" title="Elastic Load Balancing" />
+                    <img src="../assets/aws-icons/RDS.png" alt="Relational Database Service" title="Relational Database Service" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../s3-commands-cli/index.html">
+              <div class="project-container" id="project-container-5">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">S3 Commands in the AWS Command Line Interface</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CLI.png" alt="" />
+                    <img src="../assets/aws-icons/S3.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer-content">
+        <div id="copyright-and-year"></div>
+        <div id="built-by">
+          WEBSITE<br />DESIGNED & BUILT<br />BY SIMON CULL
+        </div>
+      </div>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="images.js"></script>
+    <script src="scroll.js"></script>
+  </body>
+</html>

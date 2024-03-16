@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Cull - CV</title>
+
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/all-projects.css">
+  <link rel="stylesheet" href="project.css">
+  <link rel="stylesheet" href="../assets/responsive.css">
+</head>
+  <body id="top">
+    <header>
+      <h1>Serverless Web Application</h1>
+      <img src="../assets/images/banner.jpg" alt="">
+    </header>
+    <aside>
+      <div id="section-1" class="section">
+        <div class="aside-section-content">
+          <div class="aside-content-name-title">
+            <h3>Simon Cull</h3>
+            <span><em>AWS Cloud Engineer</em></span>
+          </div>
+          <div class="content-div-container">
+            <div id="content-div-1" class="content-div">
+              <a href="tel:+447974410248"> 07974 410248 </a>
+            </div>
+            <div id="content-div-2" class="content-div">
+              <a href="mailto:simoncull@gmail.com"> simoncull@gmail.com </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section-2" class="section">
+        <div class="aside-menu">
+          <a href="../">
+            <div class="aside-menu-item" id="homeBtn">
+              Home
+            </div>
+          </a>
+          <div class="aside-menu-item" id="projectsBtn">
+            Projects
+          </div>
+          <div class="aside-menu-item" id="topBtn">
+            Back to Top
+          </div>
+        </div>
+      </div>
+      <div id="section-3" class="section">
+        <div id="socialIcons"></div>
+        <div id="counter">
+          VIEW COUNT:<span id="counter-value">&nbsp;3000</span>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div id="overlay">
+        <img id="overlay-img" src="" alt="" />
+        <div id="overlay-img-btns">
+          <div id="overlay-img-btn-back" class="overlay-img-btn">&#8592;</div>
+          <div id="overlay-img-btn-forwards" class="overlay-img-btn">&#8594;</div>
+          <div id="overlay-img-btn-close" class="overlay-img-btn">CLOSE</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="current-project-row">
+          <!-- <h3 class="sub-title-span">
+            Serverless Web Application
+          </h3> -->
+          <div class="text-passages">
+            <p class="project-summary">
+              This was an AWS-provided project to build a fully-serverless web
+              application - an Uber-like app where you can request unicorn
+              rides from a location you select by clicking on a map. It was
+              composed of a HTML-based user interface, hosted on AWS Amplify,
+              where users can register and log in. Authentication and
+              authorization of users was handled by Amazon Cognito. From there
+              users could make requests to the public backend, built using a
+              JavaScript-based AWS Lambda function and a REST API, built on
+              Amazon's API Gateway. Data from the requests was then stored in
+              an Amazon DynamoDB table for data persistence.
+            </p>
+          </div>
+
+          <div class="services-and-image">
+            <div class="project-architecture-img">
+              <img src="serverlesswebapp.png" alt="" />
+            </div>
+            <div class="services-used">
+              <span class="row-title-span"> Services Used </span>
+              <ul class="services-used-ul">
+                <li>CodeCommit</li>
+                <li>Amplify</li>
+                <li>Cognito</li>
+                <li>API Gateway</li>
+                <li>Lambda</li>
+                <li>DynamoDB</li>
+              </ul>
+            </div>
+          </div>
+        
+          <ol>
+            <li>
+              I used AWS CodeCommit - a source control service - to host a
+              repo, then pulled the AWS-created code and files from a public
+              Amazon S3 bucket, then commited to the repo. Required an IAM
+              policy to allow user access to CodeCommit and Git credentials to
+              allow HTTPS connections to CodeCommit.
+            </li>
+            <li>
+              Amplify then pulled the files from CodeCommit and automatically
+              deployed any subsequent changes made to the files, building and
+              hosting the frontend of the application. Required an IAM service
+              role to allow Amplify read-only access to the repo on
+              CodeCommit.
+            </li>
+            <li>
+              For user registration and login, I used Cognito. To connect
+              Cognito to the app in Amplify, I edited the config.js file,
+              stored in the repo, entering the User Pool ID and the Client ID,
+              taken from the Cognito details page. Registration was now
+              possible. Upon signing in, I was provided with an Authentication
+              Token.
+            </li>
+            <li>
+              I then created a DynamoDB table, to store the requests recorded
+              by the Lambda function.
+            </li>
+            <li>
+              For Lambda functions, the execution role defines what the
+              function has permission to do. This function needed permission
+              to write to the DynamoDB table. I created an IAM role for the
+              Lambda service and attached a policy granting the required
+              permissions. Granting least privilege access - in line with best
+              practices - the only action allowed was PutItem, the only
+              resource allowed was the specific table.
+            </li>
+            <li>
+              The Lambda function used the AWS SDK for JavaScript to make the
+              DynamoDB table accessible to the function. The function checked
+              for user authorization, then created an array of objects
+              representing the unicorns and set up the required processes
+              before writing to the DynamoDB table.
+            </li>
+            <li>
+              The Lambda function was called from an API Gateway-created REST
+              API. As the application was using a Cognito user pool you were
+              required to create an Authorizer, tested using the
+              Authentication Token provided earlier.
+            </li>
+            <li>
+              To connect the API to the function, I created the resource
+              '/ride', with the method 'POST', and integrated it with the
+              Lambda function. It was necessary to enable CORS, as the app
+              domain was different to the domain used to invoke the API call,
+              so cross-origin. Deploying the API returned an invoke URL which
+              I added to the config.js file in the CodeCommit repo. Amplify
+              then deployed this updated code and returned a URL ending with
+              ...amplifyapp.com, which connected to the running app, a
+              clickable map from the ArcGIS.com website, to select the
+              destination for the unicorn. The details were also recorded in
+              the DynamoDB table.
+            </li>
+            <li>
+              Using Amplify, configured a new, personalised domain with an SSL
+              certificate.
+            </li>
+          </ol>
+
+          <div class="gallery">
+            <div class="page-project-image-container">
+              <figure class="page-project-image">
+                <img src="project-images/1.png" title="" alt="" />
+                <figcaption>CodeCommit Repo</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/2.png" title="" alt="" />
+                <figcaption>Amplify pulling code</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/3.png" title="" alt="" />
+                <figcaption>Amplify deploying</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/4.png" title="" alt="" />
+                <figcaption>Pull using CLI</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/5.png" title="" alt="" />
+                <figcaption>Cognito User Pool</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/6.png" title="" alt="" />
+                <figcaption>Edit config.js in CLI</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/7.png" title="" alt="" />
+                <figcaption>Authentication token</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/8.png" title="" alt="" />
+                <figcaption>Lambda Execution Role</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/9.png" title="" alt="" />
+                <figcaption>Lambda Dynamo write</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/10.png" title="" alt="" />
+                <figcaption>Dynamo table item</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/11.png" title="" alt="" />
+                <figcaption>REST API</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/12.png" title="" alt="" />
+                <figcaption>API Authorizer</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/13.png" title="" alt="" />
+                <figcaption>API Resources</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/14.png" title="" alt="" />
+                <figcaption>API Methods</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/15.png" title="" alt="" />
+                <figcaption>config.js</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/16.png" title="" alt="" />
+                <figcaption>Amplify deploy & URL</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/17.png" title="" alt="" />
+                <figcaption>Final app</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/18.png" title="" alt="" />
+                <figcaption>Amplify new domain</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/19.png" title="" alt="" />
+                <figcaption>SSL configuration</figcaption>
+              </figure>
+              <figure class="page-project-image">
+                <img src="project-images/20.png" title="" alt="" />
+                <figcaption>Completed project</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      
+        <div class="projects-row" id="projects">
+          <h3 class="sub-title-span">Projects</h3>
+          <div class="projects-container">
+            <a href="../cloud-resume-challenge/index.html">
+              <div class="project-container" id="project-container-1">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Cloud Resume Challenge</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/S3.png" alt="S3" title="S3" />
+                    <img src="../assets/aws-icons/CloudFront.png" alt="CloudFront" title="CloudFront" />
+                    <img src="../assets/aws-icons/github-mark.png" style="background-color: #FFF;" alt="GitHub" title="GitHub" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                    <img src="../assets/aws-icons/Route53.png" alt="Route53.png" title="Route53.png" />
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../two-tier-terraform/index.html">
+              <div class="project-container" id="project-container-2">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Two-Tier Web Application Architecture built using Terraform</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancer" title="Elastic Load Balancer" />
+                    <img src="../assets/aws-icons/RDS.png" alt="RDS" title="RDS" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <!-- <a href="../serverless-web-app/index.html"> -->
+              <div class="project-container" id="project-container-3">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Serverless Web Application</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CodeCommit.png" alt="CodeCommit" title="CodeCommit" />
+                    <img src="../assets/aws-icons/Amplify.png" alt="Amplify" title="Amplify" />
+                    <img src="../assets/aws-icons/Cognito.png" alt="Cognito" title="Cognito" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/APIGateway.png" alt="API Gateway" title="API Gateway" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                  </div>
+                </div>
+              </div>
+            <!-- </a> -->
+            <a href="../three-tier-architecture/index.html">
+              <div class="project-container" id="project-container-4">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Three-Tier Web Application Architecture</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/EC2AutoScaling.png" alt="EC2 Auto Scaling" title="EC2 Auto Scaling" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancing" title="Elastic Load Balancing" />
+                    <img src="../assets/aws-icons/RDS.png" alt="Relational Database Service" title="Relational Database Service" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../s3-commands-cli/index.html">
+              <div class="project-container" id="project-container-5">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">S3 Commands in the AWS Command Line Interface</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CLI.png" alt="" />
+                    <img src="../assets/aws-icons/S3.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer-content">
+        <div id="copyright-and-year"></div>
+        <div id="built-by">
+          WEBSITE<br />DESIGNED & BUILT<br />BY SIMON CULL
+        </div>
+      </div>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="images.js"></script>
+    <script src="scroll.js"></script>
+  </body>
+</html>

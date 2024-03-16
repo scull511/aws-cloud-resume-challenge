@@ -1,0 +1,125 @@
+@media only screen and (max-width: 1200px) {
+    body {
+        grid-template-columns: 1fr 200px;
+    }
+
+    aside {
+        width: 200px;
+    }
+
+    aside #section-1 .aside-section-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    aside #section-1 .aside-section-content em {
+        font-size: 0.75rem;
+    }
+    
+    .aside-section-content .content-div {
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    #counter {
+        font-size: 0.8rem;
+    }
+
+    .aside-menu-item {
+        padding: 20px;
+        height: 100%;
+        width: 200px;
+        cursor: pointer;
+        font-size: 0.75rem;
+    }
+
+    .badge img {
+        width: 125px;
+    }
+
+    .header-title-container {
+        /* margin-left: 50px; */
+        justify-content: center;
+    }
+
+    .skills-row {
+        grid-column-gap: 50px;
+    }
+    
+    .projects-container {
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    
+
+
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .skills-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sub-title-span {
+        font-size: 2rem;
+    }
+    .badges-row {
+        gap: 25px;
+    }
+
+    .badges-row-1, .badges-row-2 {
+        gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .badges-row {
+        gap: 10px;
+    }
+
+    .badges-row-1, .badges-row-2 {
+        gap: 10px;
+    }
+
+    .badge img {
+        width: 125px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .badges-row {
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 5px;
+    }
+
+    .badges-row-1, .badges-row-2 {
+        gap: 5px;
+    }
+
+    .badge img {
+        width: 100px;
+    }
+
+    #projects {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .badge img {
+        width: 75px;
+    }
+}

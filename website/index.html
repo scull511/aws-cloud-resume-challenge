@@ -1,272 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simon Cull - Cloud Resume</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;600&display=swap"
-      rel="stylesheet"
-    /> -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="content">
-      <header id="left-panel" class="panel">
-        <div id="left-panel-content">
-          <div class="contentDiv" id="content-1">
-            <span id="myName">Simon Cull</span>
-            <span id="myEmail">
-              <a href="mailto:simoncull@gmail.com"> simoncull@gmail.com </a>
-            </span>
-            <span id="myNumber">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Cull - CV</title>
+
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="assets/responsive.css">
+</head>
+  <body id="top">
+    <header>
+      <img src="../../assets/images/banner.jpg" alt="">
+      <div class="header-title-container">
+        <h1 class="header-title-span">Simon Cull</h1>
+        <span><em>AWS Cloud Engineer</em></span>
+      </div>
+    </header>
+    <aside>
+      <div id="section-1" class="section">
+        <div class="aside-section-content">
+          <div class="aside-content-name-title">
+            <h3>Simon Cull</h3>
+          </div>
+          <div class="content-div-container">
+            <div id="content-div-1" class="content-div">
               <a href="tel:+447974410248"> 07974 410248 </a>
-            </span>
-            <span>
-              <a href=""
-                ><img class="socialIcons" src="assets/icons/twitter.png" alt=""
-              /></a>
-              <a href=""
-                ><img class="socialIcons" src="assets/icons/github.png" alt=""
-              /></a>
-            </span>
-          </div>
-          <div class="contentDiv" id="content-2">
-            <div id="myImage">
-              <img src="" alt="" />
+            </div>
+            <div id="content-div-2" class="content-div">
+              <a href="mailto:simoncull@gmail.com"> simoncull@gmail.com </a>
             </div>
           </div>
-          <div class="contentDiv" id="content-3">
-            <ul>
-              <li>About</li>
-              <li>Skills</li>
-              <li>Projects</li>
-              <li>Certifications</li>
-            </ul>
-            <br />
-            <div id="counter">VIEW COUNT:<span id="counter-value"></span></div>
-          </div>
-          <div class="contentDiv" id="content-4">
-            <ul>
-              <li>233 Hoo Road</li>
-              <li>Kidderminster</li>
-              <li>Worcestershire</li>
-              <li>DY10 1LT</li>
-              <li>United Kingdom</li>
-            </ul>
-          </div>
-
-          <!--  -->
-
-          <!-- <li>233 Hoo Road</li>
-              <li>Kidderminster</li>
-              <li>Worcestershire</li>
-              <li>DY10 1LT</li>
-              <li>United Kingdom</li> -->
-
-          <ul>
-            <!-- <li>ABOUT</li>
-            <li>SKILLS</li>
-            <li>CERTIFICATIONS</li>
-            <li>PROJECTS</li>
-            <li>CONTACT</li> -->
-          </ul>
         </div>
-      </header>
-
-      <main id="right-panel" class="panel">
-        <div id="right-panel-content">
-          <div class="row" id="row-0">
-            <div class="rowTitle">
-              <span> About </span>
-            </div>
-            <div class="rowContent">
-              <p class="contentTextPassages">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae
-                repudiandae sit explicabo? Sed repellendus veniam dolore aliquam
-                illo, nemo alias laboriosam consequuntur obcaecati, vitae
-                praesentium? Rem sint fuga sequi eveniet expedita harum ut error
-                cupiditate nam ipsam impedit, nesciunt repellendus illum cum
-                corporis molestiae deleniti fugit velit culpa est amet obcaecati
-                similique, sunt quam. Illum nemo distinctio asperiores
-                veritatis, harum quia iure nobis optio, enim quod ad? Cupiditate
-                veritatis recusandae hic nemo libero dignissimos quaerat, sed
-                ipsum aperiam atque necessitatibus? Voluptatem numquam, deleniti
-                id autem sint, vitae facilis nulla eum at ullam neque saepe eos
-                cupiditate temporibus doloribus. Aliquam, repellat.
-              </p>
+      </div>
+      <div id="section-2" class="section">
+        <div class="aside-menu">
+          <div class="aside-menu-item" id="aboutBtn">
+            About
+          </div>
+          <div class="aside-menu-item" id="badgesBtn">
+            Certifications & Badges
+          </div>
+          <div class="aside-menu-item" id="skillsBtn">
+            Technical Skills
+          </div>
+          <div class="aside-menu-item" id="projectsBtn">
+            Projects
+          </div>
+        </div>
+      </div>
+      <div id="section-3" class="section">
+        <!-- <div id="socialIcons">SOCIAL MEDIA ICONS</div> -->
+        <div id="counter">
+          VIEW COUNT:&nbsp;<span id="counter-value"></span>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div class="container">
+        <div id="about" class="about-row">
+          <h3 class="sub-title-span">About</h3>
+          <div class="text-passages">
+            <p>
+              Enthusiastic and adaptable professional with a passion for cloud computing and a proven ability to overcome challenges. My journey in technology has been shaped by a determination to surmount health-related obstacles, including mobility issues, which led to gaps in my work experience. Having overcome these challenges, I've found renewed purpose and passion in the field of cloud computing. Through extensive self-directed learning, I have acquired in-depth knowledge and practical skills in cloud computing, backed by the achievement of four AWS certifications. My commitment to staying at the forefront of technological advancements showcases my dedication to continuous learning and a drive for excellence.
+            </p>
+            <p>
+              Driven by a strong work ethic, I am eager to leverage my skills in AWS technologies, including VPC, EC2, IAM, S3, DynamoDB, RDS, CloudFront, and Lambda, along with a specialization in AWS Security. Holding the AWS Security Specialty Certification underscores my commitment to creating secure and robust cloud environments, with specific expertise in AWS WAF.
+            </p>
+            <p>
+              Embracing a continuous learning mindset, I have expanded my skill set to include Infrastructure as Code using Terraform and proficiency in languages such as JavaScript, TypeScript, and Python. These skills, coupled with a solid understanding of Linux and bash scripting, form the foundation of my technical capabilities.
+            </p>
+            <p>
+              My journey back into the workforce is not just a professional reawakening but a testament to my resilience and dedication. I am excited about the prospect of contributing my skills, learning from new challenges, and becoming an integral part of dynamic teams. Open to acquiring new knowledge and skills, I am committed to making meaningful contributions to projects and organizations that value adaptability, innovation, and continuous improvement.
+            </p>
+          </div>
+        </div>
+        <div id="badges" class="badges-row">
+          <h3 class="sub-title-span">Certifications & Badges</h3>
+          <div class="badges-row-1">
+            <a href="https://www.credly.com/badges/04f9ffae-de7f-4e94-b801-40f72b131c35/public_url" target="_blank" >
+              <div class="badge" id="badge-1">
+                <img src="../assets/images/badges/aws-certified-security-specialty.png" alt="" />
+                <span>AWS Certified Security – Specialty</span>
+              </div>
+            </a>
+            <a href="https://www.credly.com/badges/bce9c6f9-31ec-4f0b-958f-e240706b6764/public_url" target="_blank">
+              <div class="badge" id="badge-2">
+                <img src="../assets/images/badges/aws-certified-solutions-architect-associate.png" alt="" />
+                <span>AWS Certified Solutions Architect – Associate</span>
+              </div>
+            </a>
+            <a href="https://www.credly.com/badges/4b0cf510-a764-4cf8-bd70-7e14a1211502/public_url" target="_blank">
+              <div class="badge" id="badge-3">
+                <img src="../assets/images/badges/aws-certified-developer-associate.png" alt="" />
+                <span>AWS Certified Developer – Associate</span>
+              </div>
+            </a>
+          </div>
+          <div class="badges-row-2">
+            <a href="https://www.credly.com/badges/3022798f-153b-4df9-85f2-49acb2defcbc/public_url" target="_blank">
+              <div class="badge" id="badge-4">
+                <img src="../assets/images/badges/aws-certified-cloud-practitioner.png" alt="" />
+                <span>AWS Certified Cloud Practitioner</span>
+              </div>
+            </a>
+            <a href="https://www.credly.com/badges/996468be-a769-4777-b661-64c4b525a537/public_url" target="_blank" >
+              <div class="badge" id="badge-5">
+                <img src="../assets/images/badges/aws-knowledge-compute.png" alt="" />
+                <span>AWS Knowledge: Compute</span>
+              </div>
+            </a>
+          </div>
+          
+        </div>
+        <div id="skills" class="skills-row">
+          <h3 class="sub-title-span">Technical Skills</h3>
+          <div class="skills-list-col" id="skills-list-col-1">
+            <div class="skills-collection">
+              <span class="row-title-span-skills-list">
+                Cloud Technologies:
+              </span>
+              <ul>
+                <li>
+                  AWS Services: VPC, EC2, IAM, S3, DynamoDB, RDS, CloudFront, Lambda, and more.
+                </li>
+                <li>
+                  AWS Security Specialty Certification: Proficient in securing AWS environments with a focus on AWS WAF.
+                </li>
+                <li>
+                  Terraform: Experienced in Infrastructure as Code (IaC) using Terraform for provisioning and managing cloud resources.
+                </li>
+              </ul>
+            </div>  
+            <div class="skills-collection">
+              <span class="row-title-span-skills-list">
+                Security:
+              </span>
+              <ul>
+                <li>
+                  AWS Security Services: In-depth knowledge of AWS security services and best practices.
+                </li>
+                <li>
+                  AWS WAF: Expertise in implementing and managing AWS Web Application Firewall for enhanced application security.
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="row" id="row-1">
-            <div class="rowTitle">
-              <span> Skills </span>
+          <div class="skills-list-col" id="skills-list-col-2">
+            <div class="skills-collection">
+              <span class="row-title-span-skills-list">
+                Programming Languages:
+              </span>
+              <ul>
+                <li>
+                  JavaScript and TypeScript: Skilled in developing serverless applications and front-end solutions.
+                </li>
+                <li>
+                  Python: Proficient in scripting, automation, and backend development.
+                </li>
+              </ul>
             </div>
-            <div class="rowContent">
-              <p class="contentTextPassages">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum,
-                debitis obcaecati? Alias similique, ea fuga delectus eius
-                distinctio mollitia sunt. Inventore repellat, cumque tenetur
-                facere voluptas et velit nulla iste, adipisci sed a error, quas
-                corrupti perferendis sequi ab ducimus voluptatibus eos porro
-                laborum! Porro aperiam nemo vel unde. Nulla id ducimus molestias
-                eveniet? Exercitationem, asperiores sapiente error quo facere
-                quae hic fugit mollitia omnis similique aperiam? Doloremque
-                tempore id maxime architecto ut cupiditate ea, rerum explicabo
-                ullam beatae pariatur deleniti atque, minima assumenda mollitia
-                quidem quam libero cumque?
-              </p>
+            <div class="skills-collection">
+              <span class="row-title-span-skills-list">
+                Operating Systems:
+              </span>
+              <ul>
+                <li>
+                  Linux: Solid understanding and experience in Linux environments.
+                </li>
+                <li>
+                  Bash: Proficient in shell scripting for automation and system administration tasks.
+                </li>
+              </ul>
+            </div>
+            <div class="skills-collection">
+              <span class="row-title-span-skills-list">
+                Other Skills:
+              </span>
+              <ul>
+                <li>
+                  Problem Solving: Strong analytical and problem-solving skills.
+                </li>
+                <li>
+                  Communication: Excellent written and verbal communication skills.
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="row" id="row-2">
-            <div class="rowTitle">
-              <span> Projects </span>
-            </div>
-            <div class="rowContent">
-              <div class="rowContentExtraProjects">
-                <div class="project-container">
-                  <div class="project" id="project-0">
-                    <div class="overlay"></div>
-                    <div class="project-details">
-                      <h2>TITLE OR SUMMARY OF PROJECT</h2>
-                      <p>STEPS YOU TOOK WHEN BUILDING</p>
-                      <span>LIST OF SERVICES USED</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-container">
-                  <div class="project" id="project-1">
-                    <div class="overlay"></div>
-                    <div class="project-details">
-                      <h2>TITLE OR SUMMARY OF PROJECT</h2>
-                      <p>STEPS YOU TOOK WHEN BUILDING</p>
-                      <span>LIST OF SERVICES USED</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-container">
-                  <div class="project" id="project-2">
-                    <div class="overlay"></div>
-                    <div class="project-details">
-                      <h2>TITLE OR SUMMARY OF PROJECT</h2>
-                      <p>STEPS YOU TOOK WHEN BUILDING</p>
-                      <span>LIST OF SERVICES USED</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-container">
-                  <div class="project" id="project-3">
-                    <div class="overlay"></div>
-                    <div class="project-details">
-                      <h2>TITLE OR SUMMARY OF PROJECT</h2>
-                      <p>STEPS YOU TOOK WHEN BUILDING</p>
-                      <span>LIST OF SERVICES USED</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-container">
-                  <div class="project" id="project-4">
-                    <div class="overlay"></div>
-                    <div class="project-details">
-                      <h2>TITLE OR SUMMARY OF PROJECT</h2>
-                      <p>STEPS YOU TOOK WHEN BUILDING</p>
-                      <span>LIST OF SERVICES USED</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="project-container">
-                  <div class="project" id="project-5">
-                    <div class="overlay"></div>
-                    <div class="project-details">
-                      <h2>TITLE OR SUMMARY OF PROJECT</h2>
-                      <p>STEPS YOU TOOK WHEN BUILDING</p>
-                      <span>LIST OF SERVICES USED</span>
-                    </div>
+        </div>
+        <div id="projects" class="projects-row">
+          <h3 class="sub-title-span">Projects</h3>
+          <div class="projects-container">
+            <a href="cloud-resume-challenge/index.html">
+              <div class="project-container" id="project-container-1">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Cloud Resume Challenge</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/S3.png" alt="S3" title="S3" />
+                    <img src="../assets/aws-icons/CloudFront.png" alt="CloudFront" title="CloudFront" />
+                    <img src="../assets/aws-icons/github-mark.png" style="background-color: #FFF;" alt="GitHub" title="GitHub" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                    <img src="../assets/aws-icons/Route53.png" alt="Route53.png" title="Route53.png" />
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row" id="row-3">
-            <div class="rowTitle">
-              <span> Certifications & Badges </span>
-            </div>
-            <div class="rowContent">
-              <div class="rowContentExtraBadges">
-                <a
-                  href="https://www.credly.com/badges/3022798f-153b-4df9-85f2-49acb2defcbc/public_url"
-                  target="_blank"
-                >
-                  <div class="badge">
-                    <img
-                      src="assets/images/badges/aws-certified-cloud-practitioner.png"
-                      alt=""
-                    />
+            </a>
+            <a href="two-tier-terraform/index.html">
+              <div class="project-container" id="project-container-2">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Two-Tier Web Application Architecture built using Terraform</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancer" title="Elastic Load Balancer" />
+                    <img src="../assets/aws-icons/RDS.png" alt="RDS" title="RDS" />
                   </div>
-                </a>
-                <a
-                  href="https://www.credly.com/badges/bce9c6f9-31ec-4f0b-958f-e240706b6764/public_url"
-                  target="_blank"
-                >
-                  <div class="badge">
-                    <img
-                      src="assets/images/badges/aws-certified-solutions-architect-associate.png"
-                      alt=""
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://www.credly.com/badges/4b0cf510-a764-4cf8-bd70-7e14a1211502/public_url"
-                  target="_blank"
-                >
-                  <div class="badge">
-                    <img
-                      src="assets/images/badges/aws-certified-developer-associate.png"
-                      alt=""
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://www.credly.com/badges/04f9ffae-de7f-4e94-b801-40f72b131c35/public_url"
-                  target="_blank"
-                >
-                  <div class="badge">
-                    <img
-                      src="assets/images/badges/aws-certified-security-specialty.png"
-                      alt=""
-                    />
-                  </div>
-                </a>
-                <a
-                  href="https://www.credly.com/badges/996468be-a769-4777-b661-64c4b525a537/public_url"
-                  target="_blank"
-                >
-                  <div class="badge">
-                    <img
-                      src="assets/images/badges/aws-knowledge-compute.png"
-                      alt=""
-                    />
-                  </div>
-                </a>
+                </div>
               </div>
-            </div>
-            <!-- 
-            
-            
-            
-             -->
+            </a>
+            <a href="serverless-web-app/index.html">
+              <div class="project-container" id="project-container-3">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Serverless Web Application</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CodeCommit.png" alt="CodeCommit" title="CodeCommit" />
+                    <img src="../assets/aws-icons/Amplify.png" alt="Amplify" title="Amplify" />
+                    <img src="../assets/aws-icons/Cognito.png" alt="Cognito" title="Cognito" />
+                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
+                    <img src="../assets/aws-icons/APIGateway.png" alt="API Gateway" title="API Gateway" />
+                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="three-tier-architecture/index.html">
+              <div class="project-container" id="project-container-4">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">Three-Tier Web Application Architecture</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
+                    <img src="../assets/aws-icons/EC2AutoScaling.png" alt="EC2 Auto Scaling" title="EC2 Auto Scaling" />
+                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancing" title="Elastic Load Balancing" />
+                    <img src="../assets/aws-icons/RDS.png" alt="Relational Database Service" title="Relational Database Service" />
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="s3-commands-cli/index.html">
+              <div class="project-container" id="project-container-5">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">S3 Commands in the AWS Command Line Interface</div>
+                  <div class="project-icons">
+                    <img src="../assets/aws-icons/CLI.png" alt="" />
+                    <img src="../assets/aws-icons/S3.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
-          <!-- <div class="row" id="row-4"></div>
-          <div class="row" id="row-5"></div> -->
         </div>
-        <footer>
-          <div id="copyrightAndYear">2024</div>
-          <div id="BUILTBY">WEBSITE BUILT BY ME</div>
-        </footer>
-      </main>
-    </div>
-
-    <script src="main.js"></script>
+      </div>
+    </main>
+    <footer>
+      <div id="footer-content">
+        <div id="copyright-and-year"></div>
+        <div id="built-by">
+          WEBSITE<br />DESIGNED & BUILT<br />BY SIMON CULL
+        </div>
+      </div>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="scroll.js"></script>
   </body>
 </html>
