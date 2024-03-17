@@ -32,13 +32,35 @@
 .project-container-image {
     width: 100%;
     height: 250px;
-    background-color: var(--dark);
+    background-color: var(--mid);
     color: var(--light);
-    padding: 30px;
+    padding: 0px;
     display: grid;
-    grid-template-rows: 1fr 50px;
+    grid-template-rows: 2fr 1fr;
     align-items: center;
     justify-content: center;
+}
+
+.project-container-image-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 20px;
+}
+
+.services-used-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #ccc;
+    background-color: var(--dark);
+    padding: 10px;
+    height: 100%;
+    width: 100%;
 }
 
 .project-icons {

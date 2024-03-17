@@ -71,7 +71,7 @@
           </h3> -->
           <div class="text-passages">
             <p class="project-summary">
-              CRC summary
+              Did the Cloud Resume Challenge, building a dynamic website with functionalities like a visitor counter using AWS services. This project demonstrates hands-on experience in cloud technologies and the ability to apply them to real-world applications.
             </p>
           </div>
 
@@ -83,29 +83,12 @@
             <li>I created a Lambda function, written using Python, to record each website view. When creating the Lambda, by enabling the function URL you can use that public URL to invoke the Lambda function, rather than using the API Gateway. The function then uses 'get_item' to retrieve the current 'view' value from the database table, increments the value by 1, and then uses 'put_item' to record the updated value to the database table.
             </li>
             <li>To display the view count, I created a JavaScript function which used a fetch request to call the Lambda function - so all of the above steps were performed, and the view count was then displayed on the web page.</li>
-            <li>TERRAFORM OR SAM      ############# REORDER, PUT IT HERE</li>
+            <li>For source control, I created a GitHib repository and uploaded the local HTML, CSS and JavaScript files. I then initialized the repository, added and then then committed the local files to the repository.</li>
+            <li>To automate the delivery of code with a CI/CD pipeline I used GitHub Actions. Specfically using a GitHub Action called S3 Sync, which will sync a directory with an S3 bucket, ensuring changes are deployed as you make them. To set this up, you configure a .yml file which runs S3 Sync when you push code to the main branch in your repository on GitHub.</li>
+            <li>When configuring the GitHub Action, I passed in Access Key credentials and the S3 bucket name as environment variable, for secure access from GitHub to the S3 bucket.</li>
             <li></li>
-            <li></li>
-            <li>Source Control - Created a GitHub repository</li>
-            <li>
-              <!-- <pre>
-                git init
-                git add .
-                git commit -m "first commit
-                git branch -M main
-                git remote add origin https://github.com/scull511/aws-cloud-resume-challenge.git
-                git push -u origin main
-              </pre> -->
-              <span>######### ADD README file with descripton, diagram, services used etc</span>
-            </li>
-            <li>CI/CD Pipeline using GitHub Actions</li>
-            
-
-            <!-- 
-              TAKE SCREENSHOTS FOR DIFFERENT THINGS
-            -->
           </ol>
-                <!-- 1. Got a certification or 4. -->
+        </div>
       
         <div class="projects-row" id="projects">
           <h3 class="sub-title-span">Projects</h3>
@@ -114,14 +97,8 @@
               <div class="project-container" id="project-container-1">
                 <div class="project-container-image">
                   <div class="project-container-image-title">Cloud Resume Challenge</div>
-                  <div class="project-icons">
-                    <img src="../assets/aws-icons/S3.png" alt="S3" title="S3" />
-                    <img src="../assets/aws-icons/CloudFront.png" alt="CloudFront" title="CloudFront" />
-                    <img src="../assets/aws-icons/github-mark.png" style="background-color: #FFF;" alt="GitHub" title="GitHub" />
-                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
-                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
-                    <img src="../assets/aws-icons/Route53.png" alt="Route53.png" title="Route53.png" />
-                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
+                  <div class="services-used-project">
+                    S3, CloudFront, GitHub, Lambda, Dynamo DB, Route 53, Terraform
                   </div>
                 </div>
               </div>
@@ -130,11 +107,8 @@
               <div class="project-container" id="project-container-2">
                 <div class="project-container-image">
                   <div class="project-container-image-title">Two-Tier Web Application Architecture built using Terraform</div>
-                  <div class="project-icons">
-                    <img src="../assets/aws-icons/Terraform.png" style="background-color: #FFF;" alt="Terraform" title="Terraform" />
-                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
-                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancer" title="Elastic Load Balancer" />
-                    <img src="../assets/aws-icons/RDS.png" alt="RDS" title="RDS" />
+                  <div class="services-used-project">
+                    Terraform, EC2, Elastic Load Balancing, RDS
                   </div>
                 </div>
               </div>
@@ -143,13 +117,8 @@
               <div class="project-container" id="project-container-3">
                 <div class="project-container-image">
                   <div class="project-container-image-title">Serverless Web Application</div>
-                  <div class="project-icons">
-                    <img src="../assets/aws-icons/CodeCommit.png" alt="CodeCommit" title="CodeCommit" />
-                    <img src="../assets/aws-icons/Amplify.png" alt="Amplify" title="Amplify" />
-                    <img src="../assets/aws-icons/Cognito.png" alt="Cognito" title="Cognito" />
-                    <img src="../assets/aws-icons/Lambda.png" alt="Lambda" title="Lambda" />
-                    <img src="../assets/aws-icons/APIGateway.png" alt="API Gateway" title="API Gateway" />
-                    <img src="../assets/aws-icons/DynamoDB.png" alt="DynamoDB" title="DynamoDB" />
+                  <div class="services-used-project">
+                    CodeCommit, Amplify, Cognito, Lambda, API Gateway, DynamoDB
                   </div>
                 </div>
               </div>
@@ -158,11 +127,8 @@
               <div class="project-container" id="project-container-4">
                 <div class="project-container-image">
                   <div class="project-container-image-title">Three-Tier Web Application Architecture</div>
-                  <div class="project-icons">
-                    <img src="../assets/aws-icons/EC2.png" alt="EC2" title="EC2" />
-                    <img src="../assets/aws-icons/EC2AutoScaling.png" alt="EC2 Auto Scaling" title="EC2 Auto Scaling" />
-                    <img src="../assets/aws-icons/ElasticLoadBalancing.png" alt="Elastic Load Balancing" title="Elastic Load Balancing" />
-                    <img src="../assets/aws-icons/RDS.png" alt="Relational Database Service" title="Relational Database Service" />
+                  <div class="services-used-project">
+                    EC2, Auto Scaling, Elastic Load Balancing, RDS
                   </div>
                 </div>
               </div>
@@ -171,9 +137,8 @@
               <div class="project-container" id="project-container-5">
                 <div class="project-container-image">
                   <div class="project-container-image-title">S3 Commands in the AWS Command Line Interface</div>
-                  <div class="project-icons">
-                    <img src="../assets/aws-icons/CLI.png" alt="" />
-                    <img src="../assets/aws-icons/S3.png" alt="" />
+                  <div class="services-used-project">
+                    S3, AWS CLI
                   </div>
                 </div>
               </div>

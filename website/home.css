@@ -163,9 +163,20 @@
     color: var(--light);
     padding: 30px;
     display: grid;
-    grid-template-rows: 1fr 50px;
+    grid-template-rows: 2fr 1fr;
     align-items: center;
     justify-content: center;
+}
+
+.project-container-image-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.services-used-project {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #ccc;
 }
 
 .project-icons {

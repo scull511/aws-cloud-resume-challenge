@@ -216,6 +216,10 @@ footer {
     color: var(--light);
     background-color: var(--dark);
     padding: 20px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #footer-content {
@@ -235,6 +239,7 @@ footer {
 #built-by {
     /* grid-column: 2; */
     font-size: 0.5rem;
+    display: none;
 }
 
 /* GALLERY LIGHTBOX */
