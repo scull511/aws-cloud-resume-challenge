@@ -166,6 +166,7 @@
     grid-template-rows: 2fr 1fr;
     align-items: center;
     justify-content: center;
+    background-color: var(--mid);
 }
 
 .project-container-image-title {
@@ -177,6 +178,7 @@
     font-size: 0.9rem;
     font-weight: 300;
     color: #ccc;
+    background-color: var(--dark);
 }
 
 .project-icons {
