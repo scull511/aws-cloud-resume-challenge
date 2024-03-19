@@ -1,20 +1,33 @@
 /* HOMEPAGE TITLE WITH SUBTITLE */
 .header-title-container {
-    margin-left: 50px;
-    position: absolute;
+    /* margin-left: 50px; */
+    /* position: absolute; */
     z-index: 20;
     display: grid;
     grid-auto-rows: auto;
-    gap: 2px;
+    gap: 5px;
     color: var(--light);
 }
 
 .header-title-container h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .header-title-container span {
     text-align: center;
+    font-size: 1rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 /* ABOUT */
@@ -159,9 +172,8 @@
 .project-container-image {
     width: 100%;
     height: 250px;
-    background-color: var(--dark);
     color: var(--light);
-    padding: 30px;
+    padding: 0px;
     display: grid;
     grid-template-rows: 2fr 1fr;
     align-items: center;
@@ -170,14 +182,25 @@
 }
 
 .project-container-image-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.2rem;
     font-weight: 400;
+    padding: 20px;
+    height: 100%;
 }
 
 .services-used-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 0.9rem;
     font-weight: 300;
-    color: #ccc;
+    color: var(--light);
+    padding: 10px;
+    height: 100%;
+    width: 100%;
     background-color: var(--dark);
 }
 

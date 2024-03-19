@@ -13,7 +13,15 @@
   <body id="top">
     <header>
       <img src="../assets/images/banner.jpg" alt="">
-      <h1>Cloud Resume Challenge</h1>
+      <div class="header-left">
+        <h1>Cloud Resume Challenge</h1>
+      </div>
+      <div class="header-right">
+        <div class="header-title-container-contact">
+          <a href="tel:+447974410248"> 07974 410248 </a>
+          <a href="mailto:simoncull@gmail.com"> simoncull@gmail.com </a>
+        </div>
+      </div>
     </header>
     <aside>
       <div id="section-1" class="section">
@@ -71,25 +79,53 @@
           </h3> -->
           <div class="text-passages">
             <p class="project-summary">
-              Did the Cloud Resume Challenge, building a dynamic website with functionalities like a visitor counter using AWS services. This project demonstrates hands-on experience in cloud technologies and the ability to apply them to real-world applications.
+              Built a dynamic website using AWS services, with functionalities like a visitor counter. This project demonstrates hands-on experience in cloud technologies and the ability to apply them to real-world applications.
+              <hr>
+              Cloud Resume Challenge: Expanding My Skillset in Cloud Technologies
+My recent participation in the Cloud Resume Challenge provided a valuable opportunity to deepen my technical skillset in cloud technologies. While the project demanded focused effort in unfamiliar territory, the outcome proved highly rewarding.
             </p>
           </div>
 
           <ol id="project-list">
+            <li>Here's an overview of the key areas I explored:</li>
+            <hr>
             <li>I first designed and created the website with HTML, CSS and JavaScript. I then created an Amazon S3 bucket to store the website files and uploaded the files to the bucket.</li>
+            
+            <li>Website Development: I constructed the website's foundation using HTML, CSS, and JavaScript, laying the groundwork for a functional and visually appealing online presence.</li>
+            <li>Cloud Storage Implementation: To ensure secure and scalable file management, I utilized Amazon S3, effectively creating a reliable cloud-based storage solution for the website's assets.</li>
+            <hr>
             <li>I used Amazon CloudFront, a content delivery network service. This allows for secure delivery of data over a low-latency HTTPS connnection. When creating the CloudFront distribution, I chose the bucket domain as the origin and used an Origin Access Control policy to grant access to the S3 bucket from the Cloudfront distribution.</li>
+
+            <li>Content Delivery Optimization: For enhanced website performance, I leveraged Amazon CloudFront, a content delivery network that streamlines content delivery for visitors across geographical boundaries.</li>
+            <hr>
             <li>With CloudFront, I set an alternate domain name (CNAME) as the domain and then requested an SSL certificate from AWS Certificate Manager. In Amazon Route 53, I created a DNS record for this alternative domain name. The record routes traffic to the CloudFront distribution.</li>
+
+            <li>Prioritizing Security: Recognizing the importance of data protection, I employed AWS Certificate Manager to obtain an SSL certificate, thereby encrypting data and safeguarding user information.</li>
+            <hr>
             <li>For the website visitor counter, I created a Dynamo DB table to store the number of views.</li>
             <li>I created a Lambda function, written using Python, to record each website view. When creating the Lambda, by enabling the function URL you can use that public URL to invoke the Lambda function, rather than using the API Gateway. The function then uses 'get_item' to retrieve the current 'view' value from the database table, increments the value by 1, and then uses 'put_item' to record the updated value to the database table.
             </li>
+
+            <li>Tracking Website Traffic: To gain insights into user engagement, I created a DynamoDB table, a highly scalable database solution within the cloud environment. Additionally, I developed a Python Lambda function that meticulously tracks website visits, providing valuable data for future analysis.</li>
+            <hr>
             <li>To display the view count, I created a JavaScript function which used a fetch request to call the Lambda function - so all of the above steps were performed, and the view count was then displayed on the web page.</li>
+
+            <li>Data Visualization Integration: To display the visitor count directly on the website, I implemented a JavaScript function. This function effectively retrieves the view count from the Lambda function and presents it visually on the web page.</li>
+            <hr>
             <li>For source control, I created a GitHib repository and uploaded the local HTML, CSS and JavaScript files. I then initialized the repository, added and then then committed the local files to the repository.</li>
+
+            <li>Version Control & Collaboration: For efficient code management and potential collaboration, I established a GitHub repository, serving as a centralized repository for all website files.</li>
+            <hr>
             <li>To automate the delivery of code with a CI/CD pipeline I used GitHub Actions. Specfically using a GitHub Action called S3 Sync, which will sync a directory with an S3 bucket, ensuring changes are deployed as you make them. To set this up, you configure a .yml file which runs S3 Sync when you push code to the main branch in your repository on GitHub.</li>
             <li>When configuring the GitHub Action, I passed in Access Key credentials and the S3 bucket name as environment variable, for secure access from GitHub to the S3 bucket.</li>
-            <li></li>
+
+            <li>Automated Deployments: Finally, I implemented a CI/CD pipeline through GitHub Actions. This streamlined approach automates website updates whenever code modifications are introduced, ensuring an efficient deployment process.</li>
+            <hr>
+
+            <li>The Cloud Resume Challenge not only equipped me with valuable technical skills, but also fostered a strong understanding of the practical applications of cloud technologies. This experience further strengthens my ability to adapt and thrive in dynamic technological environments.</li>
           </ol>
         </div>
-      
+
         <div class="projects-row" id="projects">
           <h3 class="sub-title-span">Projects</h3>
           <div class="projects-container">

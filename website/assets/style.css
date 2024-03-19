@@ -10,7 +10,11 @@
     font-size: 16px;
     --light: #f0f5f9;
     --dark: #03030a;
-    --mid: #364E68;
+    /* --mid: #364E68; */
+    --mid: #293440;
+    /* --light: #03030a;
+    --dark: #f0f5f9;
+    --mid: #364E68; */
 }
 
 @font-face {
@@ -24,9 +28,9 @@ a {
 
 /* GLOBAL CONTENT */
 html {
-    min-height: 100vh;
-    height: 100%;
-    max-width: 1920px;
+    /* min-height: 100vh; */
+    /* height: 100%; */
+    /* max-width: 1920px; */
     background-color: var(--light);
     color: var(--dark);
     margin: 0 auto;
@@ -36,8 +40,8 @@ html {
 }
 
 body {
-    height: 100%;
-    width: 100%;
+    /* height: 100%; */
+    /* width: 100%; */
     position: relative;
     display: grid;
     grid-template-columns: 1fr 300px;
@@ -65,10 +69,11 @@ header {
     grid-row: 1;
     background-color: #000;
     min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
     position: relative;
+    padding: 0 30px;
 }
 
 header img {
@@ -76,6 +81,39 @@ header img {
     filter: grayscale(0.25) opacity(0.25) hue-rotate(400deg);
     height: 100%;
     width: 100%;
+    z-index: 10;
+    position: absolute;
+}
+
+.header-title-container {
+    z-index: 20;
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 2px;
+    color: var(--light);
+}
+
+.header-title-container h1 {
+    font-size: 3rem;
+}
+
+.header-title-container span {
+    text-align: center;
+}
+
+.header-title-container-contact {
+    /* margin-right: 50px; */
+    z-index: 20;
+    display: none;
+    grid-auto-rows: auto;
+    gap: 15px;
+}
+
+.header-title-container-contact > a {
+    color: var(--light);
+    text-decoration: none;
+    text-align: right;
+    font-size: 0.85rem;
 }
 
 /* SIDEBAR */
@@ -137,7 +175,7 @@ aside #section-1 .aside-section-content em {
     text-decoration: none;
     cursor: pointer;
     color: var(--light);
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
 .aside-menu {

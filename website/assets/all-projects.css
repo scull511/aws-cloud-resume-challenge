@@ -48,16 +48,16 @@
     font-size: 1.2rem;
     font-weight: 400;
     padding: 20px;
+    height: 100%;
 }
 
 .services-used-project {
-    border-top: 1px solid rgba(255,255,255,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
     font-weight: 300;
-    color: #ccc;
+    color: var(--light);
     padding: 10px;
     height: 100%;
     width: 100%;
@@ -149,11 +149,33 @@ ol {
     border-bottom: 1px solid var(--dark);
 }
 
+header {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #000;
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    position: relative;
+    padding: 0 30px;
+}
+
 header h1 {
-    margin-left: 50px;
-    text-align: left;
-    font-size: 2.5rem;
+    /* text-align: left; */
+    font-size: 2.3rem;
     z-index: 20;
-    position: absolute;
     color: var(--light);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
