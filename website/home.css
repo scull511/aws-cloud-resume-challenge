@@ -160,6 +160,7 @@
     /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
     grid-auto-rows: auto;
+    justify-content: center;
     gap: 25px;
 }
 
