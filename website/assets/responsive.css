@@ -1,12 +1,4 @@
 @media only screen and (max-width: 1200px) {
-    body {
-        grid-template-columns: 1fr 200px;
-    }
-
-    aside {
-        width: 200px;
-    }
-
     aside #section-1 .aside-section-content h3 {
         font-size: 1.5rem;
     }
@@ -31,7 +23,7 @@
     .aside-menu-item {
         padding: 20px;
         height: 100%;
-        width: 200px;
+        /* width: 200px; */
         cursor: pointer;
         font-size: 0.75rem;
     }
@@ -62,7 +54,7 @@
 
 @media only screen and (max-width: 900px) {
     body {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%
     }
 
     header {
@@ -78,6 +70,18 @@
 
     .header-title-container span {
         font-size: 0.75rem;
+    }
+
+    .home-title {
+        font-size: 2em;
+    }
+
+    .home-sub-title {
+        font-size: 0.75em;
+    }
+
+    header h1.project-title {
+        font-size: 1.5em;
     }
 
     aside {
@@ -107,6 +111,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+    :root {
+        --padding: 40px 30px;
+    }
+    
     .header-title-container {
         /* margin-left: 30px; */
     }
@@ -159,6 +167,22 @@
         font-size: 0.6rem;
     }
 
+    .home-title {
+        font-size: 1.2em;
+    }
+
+    .home-sub-title {
+        font-size: 0.5em;
+    }
+
+    .header-title-container-contact > a {
+        font-size: 0.6rem;
+    }
+
+    header h1.project-title {
+        font-size: 1.25em;
+    }
+
     .badges-row {
         padding-left: 15px;
         padding-right: 15px;
@@ -181,19 +205,19 @@
 
 @media only screen and (max-width: 320px) {
     .header-title-container h1 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .header-title-container span {
-        font-size: 0.5rem;
+        font-size: 0.4rem;
     }
 
     .header-title-container-contact {
-        gap: 5px;
+        /* gap: 5px; */
     }
     
     .header-title-container-contact > a {
-        font-size: 0.65rem;
+        /* font-size: 0.65rem; */
     }
 
     .badge img {
