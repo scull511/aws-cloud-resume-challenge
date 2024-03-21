@@ -75,46 +75,7 @@
       <div class="container">
         <div class="current-project-row">
           <div class="text-passages">
-            AWSTemplateFormatVersion: '2010-09-09'
-Transform: AWS::Serverless-2016-10-31
-Description: A simple static website with CloudFront distribution
-
-Resources:
-  MyStaticWebsiteS3Bucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      WebsiteConfiguration:
-        IndexDocument: index.html
-        ErrorDocument: error.html
-        RedirectAllRequestsTo:
-          - Protocol: https
-            HostName: !Ref CloudFrontDomainName
-
-  MyStaticWebsiteDistribution:
-    Type: AWS::CloudFront::Distribution
-    Properties:
-      DistributionConfig:
-        Origins:
-          - DomainName: !GetAtt MyStaticWebsiteS3Bucket.DomainName
-            Id: S3Origin
-            CustomOriginConfig:
-              HTTPPort: 80
-              HTTPSPort: 443
-              OriginProtocolPolicy: http-only
-              Enabled: true
-        DefaultCacheBehavior:
-          TargetOriginId: S3Origin
-          ViewerProtocolPolicy: redirect-to-https
-          ForwardedValues:
-            QueryString: false
-          MinTTL: 0
-          DefaultTTL: 3600
-          MaxTTL: 86400
-Outputs:
-  CloudFrontDomainName:
-    Description: Domain name of the CloudFront distribution
-    Value: !Ref MyStaticWebsiteDistribution
-<p class="project-summary">
+            <p class="project-summary">
               The Cloud Resume Challenge is a hands-on project designed to help IT professionals showcase their cloud computing skills. By building a functional resume website entirely on cloud platforms, participants gain practical experience with these technologies while creating a unique and interactive resume that demonstrates their abilities to potential employers.
             </p>
             <p class="project-summary">
