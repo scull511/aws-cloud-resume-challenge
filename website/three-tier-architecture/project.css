@@ -1,3 +1,6 @@
 .project-architecture-img img {
-    height: 500px;
+    padding: 20px;
+    background-color: #FFF;
+    width: 500px;
+    max-width: 100%;
 }

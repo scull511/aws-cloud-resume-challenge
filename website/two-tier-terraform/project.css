@@ -1,7 +1,8 @@
 .project-architecture-img img {
-    height: 400px;
     padding: 20px;
     background-color: #FFF;
+    width: 400px;
+    max-width: 100%;
 }
 
 #project-list li {
@@ -16,33 +17,35 @@
     background-color: #d5d5d5;
     border: 1px solid var(--dark);
     width: auto;
-    font-size: 0.9rem;
+    font-size: 0.9em;
     text-align: left;
     padding: 10px;
     padding-left: 20px;
 }
 
-.imgCont {
+.imgContTF {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #1e1e1e;
-    padding: 15px;
-    padding-left: 20px;
+    padding: 25px;
+    /* padding-left: 20px; */
 }
 
-.imgCont img {
-    width: 100%;
+.imgContTF img {
+    width: 40%;
 }
 
-.twoImgCont {
+.twoImgContTF {
     display: grid;
+    justify-items: center;
     grid-auto-rows: auto;
     background-color: #1e1e1e;
     gap: 15px;
     padding: 15px;
 }
 
-.twoImgCont img {
+.twoImgContTF img {
     width: 40%;
 }
 

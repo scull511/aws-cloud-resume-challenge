@@ -4,7 +4,7 @@
 }
 
 header h1.project-title {
-    font-size: 2rem;
+    font-size: 2em;
     z-index: 20;
     color: var(--light);
 }
@@ -20,14 +20,15 @@ ol {
     grid-row-gap: 15px;
     line-height: 22px;
     margin-bottom: 50px;
+    list-style-position: inside;
 }
 
 .services-and-image {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
     justify-content: flex-start;
-    gap: 100px;
-    align-items: center;
+    gap: 50px;
+    align-content: start;
     margin-bottom: 30px;
 }
 
@@ -36,14 +37,16 @@ ol {
 }
 
 .services-used {
-    text-align: center;
+    text-align: left;
     display: grid;
     grid-auto-rows: auto;
+    align-content: flex-start;
+    align-items: start;
     gap: 10px;
 }
 
 .row-title-span {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 500;
 }
 

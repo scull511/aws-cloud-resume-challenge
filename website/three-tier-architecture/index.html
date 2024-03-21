@@ -28,7 +28,7 @@
         <div class="aside-section-content">
           <div class="aside-content-name-title">
             <h3>Simon Cull</h3>
-            <span><em>AWS Cloud Engineer</em></span>
+            <span>AWS Certified Security Professional</span>
           </div>
           <div class="content-div-container">
             <div id="content-div-1" class="content-div">
@@ -81,7 +81,7 @@
               This is a Three-Tier Architecture, containing a Presentation
               tier, an Application tier and a Data tier. The presentation tier
               contains the user-facing elements. The application tier contains
-              the back end, which will also contain the application code (not
+              the back end, which would also contain the application code (not
               present here). And the data tier, containg the application's
               data, normally in the form of a database.
             </p>
@@ -104,161 +104,47 @@
           </div>
 
           <div class="services-and-image">
-            <div class="project-architecture-img">
-              <img src="threetierarchitecture.png" alt="" />
-            </div>
             <div class="services-used">
               <span class="row-title-span"> Services Used </span>
-              <ul class="services-used-ul">
-                <li>EC2</li>
-                <li>EC2 Auto Scaling</li>
-                <li>Elastic Load Balancing</li>
-                <li>RDS</li>
-              </ul>
+              <p>EC2, EC2 Auto Scaling, Elastic Load Balancing, RDS</p>
+            </div>
+            <div class="project-architecture-img">
+              <img src="threetierarchitecture.png" alt="" />
             </div>
           </div>
 
           <ol>
             <li>
-              I built a VPC across two availability zones, with one public
-              subnet and two private subnets for each tier, in each
-              availability zone. With one public route table that connects the
-              public subnets to an internet gateway. For the public subnets, I
-              enabled auto-assign public IPv4 address, to enable access via
-              the internet.
+              VPC: Created across 2 Availability Zones, with public and private subnets for each tier.
             </li>
             <li>
-              I created a NAT gateway in each availability zone to allow
-              instances from the private subnets to connect to resources
-              outside of the VPC, to the internet. This is necessary to
-              perform services such as package updates or installation of
-              patches. To maintain high availability it is best practice to
-              deploy NAT gateways in each of the public subnets. When you
-              create a NAT Gateway you must assign an elastic IP address to
-              it.
+              Public Subnets: Auto-assigned public IPv4 addresses for internet access via a public route table and internet gateway.
             </li>
             <li>
-              A default route table has been created for each private subnet.
-              I deleted 3 of them and used one and explicitly associated that
-              with all four private subnets. I then added a route to the NAT
-              Gateway.
+              NAT Gateways: Created in each Availability Zone for private subnet instances to access the internet (e.g. for updates and patches). Assigned an Elastic IP to each NAT Gateway.
             </li>
             <li>
-              The presentation tier is where the application is delivered for
-              users to interact with, hosted on EC2 instances. I created a
-              launch template that was used by the Auto Scaling Group to
-              dynamically launch EC2 instances into the public subnets. In the
-              launch template I created a new security group with inbound SSH,
-              HTTP and HTTPS rules. In the Instance user data I added some
-              code to install an Apache web server displaying a basic HTML
-              page.
+              Route Tables: Configured for each subnet. Public subnets with a route to an internet gateway, and private subnets with a route to the NAT Gateway.
             </li>
             <li>
-              To ensure high availability and limit single points of failure I
-              created an auto scaling group that could dynamically provision
-              EC2 instances when needed across multiple availability in the
-              public subnets.
+              Presentation Tier: Launched on EC2 instances (configured using a launch template) via an Auto Scaling Group with a Load Balancer distributing traffic. Security group allows SSH, HTTP, HTTPS. The instance user data contains a script which installs a web server, displaying some basic HTML.
+              <br><br>
+              The Auto Scaling Group can dynamically provision EC2 instances when needed across multiple availability zones in the public subnets. This ensures high availability and limits single points of failure. Here, I created a dynamic scaling policy which monitored CPU usage.
             </li>
             <li>
-              I created an application load balancer to distribute incoming
-              HTTP traffic to EC2 instances. This was configured to be an
-              internet-facing load balancer, which means it listens for HTTP/S
-              requests. I then attached the security group I created to the
-              load balancer. I then configured the load balancer to listen
-              over HTTP on port 80 and routed it to a target group, to route
-              to the EC2 instances.
+              Application Tier: Similar setup to presentation tier, but with a bastion host for private internet access, and a connection to the database. Security group restricts public access but allows SSH/ICMP from presentation tier. Launched via Auto Scaling Group with an internal Load Balancer in private subnets.
             </li>
             <li>
-              When creating the autoscaling group I added a dynamic scale and
-              policy that tells it when to scale up or down. I configured this
-              to monitor CPU usage and to create more instances when usage was
-              above 50%. I set the desired capacity on the autoscaling group
-              to 2 instances and the maximum capacity to 5. 2 instances were
-              immediately deployed.
+              In the launch template instance user data, I entered a script to install the MySQL
+              package, to allow for later connection to the database in the data tier.
             </li>
             <li>
-              When visiting the public DNS of the application load balancer,
-              the web page was displayed, meaning the load balancer was
-              routing traffic correctly. I was also able to successfully SSH
-              into the EC2 instance.
+              Bastion Host: Created using an EC2 instance, in a public subnet, to allow for private connection to the internet, by authorized users, via SSH, using SSH Agent Forwarding.
             </li>
             <li>
-              The application tier, also often known as the logic tier, is the
-              heart of the application. Containing the application code, and
-              being at the center of operations, it will send and receive data
-              to and from the presentation tier and the data tier. The setup
-              was much the same as with the presentation tier, but included a
-              connection from a Bastion host, an EC2 instance set up in the
-              presentation tier to allow for private connection to the
-              internet, by authorized users, using SSH.
-            </li>
-            <li>
-              In the launch template, the backend EC2 instances were set up
-              using the same settings as the frontend instances, but the
-              security group was set up differently, to make public access
-              impossible. I also set it to allow SSH and ICMP from the
-              presentation tier, by using the security group in the
-              presentation tier as the source of the connection. In the
-              instance user data, I entered a script to install the MySQL
-              package, to allow for later connection to the database in the
-              data tier.
-            </li>
-            <li>
-              I then created an auto scaling group using the private subnets,
-              and an internal application load balancer, routing traffic from
-              the presentation tier rather than the public internet, using the
-              launch template created above as the target. Two new instances
-              were then automatically created, running in the private subnets.
-            </li>
-            <li>
-              I was then able to use SSH to connect to one of the presentation
-              tier servers, and from there ping an application server,
-              confirming that the connection works.
-            </li>
-            <li>
-              For the bastion host, I created a new instance in a public
-              subnet (presentation tier) and attached a security group
-              allowing only SSH, through the source ‘My IP’. I then edited the
-              security group inbound rules of an instance in the application
-              tier, allowing an SSH connection from the bastion host security
-              group.
-            </li>
-            <li>
-              To connect to the private application server through the bastion
-              host, I needed to use SSH Agent Forwarding, which provided
-              access to the keys required to authenticate and then establish
-              the connection. I was then able to connect, via SSH, from the
-              bastion host public IP address, to the application instance
-              private IP address.
-            </li>
-            <li>
-              The data tier of a three-tier application is crucial for
-              providing data persistence, for any kind of situation depending
-              on the nature of the application. This could include login
-              information, user registration details, data regarding
-              transactions, financial information, high scores, application
-              configuration…. There are many options for how to store data,
-              and in this architecture I used Amazon RDS for MySQL.
-            </li>
-            <li>
-              I first created a database security group, allowing inbound and
-              outbound traffic running to and from the servers running in the
-              application tier, over port 3306, the source being the
-              application security group. I then created a database subnet
-              group in the VPC, spanning two private subnets, running over two
-              availability zones.
-            </li>
-            <li>
-              I then created the RDS database, running in a single
-              availability zone. For best practice you would enable Multi-AZ
-              deployment, providing the database with high availability and
-              automatic failover depending on configuration. You can then also
-              create read replicas for more efficient read queries.
-            </li>
-            <li>
-              As the MySQL package was installed on the server, I then was
-              able to connect to the database through SSH using the database
-              endpoint.
+              Data Tier: Using Amazon RDS for MySQL with a database security group allowing connection from the application tier security group. I configured the inbound and outbound traffic to run to and from the servers running in the application tier, over port 3306.
+              <br><br>
+              Here, I created the RDS database in a single availability zone. For best practice you would enable Multi-AZ deployment, providing the database with high availability and automatic failover depending on configuration. You can then also create read replicas for more efficient read queries.
             </li>
           </ol>
 

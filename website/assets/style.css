@@ -41,6 +41,7 @@ body {
     display: grid;
     grid-template-columns: 80% 20%;
     grid-auto-rows: auto;
+    width: 100vw;
     font-size: 100%;
 }
 
@@ -103,11 +104,11 @@ header img {
 }
 
 .header-title-container h1 {
-    font-size: 3rem;
+    font-size: 3em;
 }
 
 .header-title-container span {
-    font-size: 3rem;
+    font-size: 3em;
     text-align: center;
 }
 
@@ -123,7 +124,7 @@ header img {
     color: var(--light);
     text-decoration: none;
     text-align: right;
-    font-size: 0.85rem;
+    font-size: 0.85em;
 }
 
 /* PROJECTS */
@@ -175,7 +176,7 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 400;
     padding: 20px;
     height: 100%;
@@ -185,8 +186,8 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 300;
+    font-size: 0.8em;
+    font-weight: 400;
     color: var(--light);
     padding: 10px;
     height: 100%;
@@ -236,12 +237,12 @@ aside #section-1 .aside-section-content {
 }
 
 aside #section-1 .aside-section-content h3 {
-    font-size: 2rem;
+    font-size: 2em;
 }
 
-aside #section-1 .aside-section-content em {
+aside #section-1 .aside-section-content span {
     margin-top: 2px;
-    font-size: 0.8rem;
+    font-size: 0.6em;
 }
 
 .aside-section-content .content-div {
@@ -253,7 +254,7 @@ aside #section-1 .aside-section-content em {
     text-decoration: none;
     cursor: pointer;
     color: var(--light);
-    font-size: 0.9rem;
+    font-size: 0.9em;
 }
 
 .aside-menu {
@@ -292,7 +293,7 @@ aside #section-3 {
 }
 
 #counter {
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 #counter #counter-value {
@@ -302,7 +303,7 @@ aside #section-3 {
 /* GLOBAL CONTENT STYLING */
 .sub-title-span {
     grid-column: 1 / -1;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     font-weight: 500;
     color: var(--dark);
     padding-bottom: 30px;
@@ -310,8 +311,8 @@ aside #section-3 {
 }
 
 .text-passages {
-    font-size: 1rem;
-    font-weight: 300;
+    font-size: 1em;
+    font-weight: 400;
 }
 
 .text-passages p {
@@ -350,7 +351,7 @@ footer {
 
 #built-by {
     /* grid-column: 2; */
-    font-size: 0.5rem;
+    font-size: 0.5em;
     display: none;
 }
 
@@ -370,14 +371,14 @@ footer {
 }
 
 #overlay-img {
-    max-height: 50%;
-    max-width: 50%;
+    max-height: 80%;
+    max-width: 80%;
 }
 
 .overlay-img-btn {
     background-color: #999;
     display: flex;
-    font-size: 2rem;
+    font-size: 2em;
     padding: 10px 15px;
 }
 

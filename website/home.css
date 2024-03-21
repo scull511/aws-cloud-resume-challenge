@@ -9,11 +9,12 @@
 
 .home-title {
     font-size: 2.5em;
+    text-align: center;
 }
 
 .home-sub-title {
     text-align: center;
-    font-size: 1em;
+    font-size: 0.75em;
 }
 
 /* ABOUT */
@@ -50,7 +51,7 @@
 
 .badges-row .sub-title-span {
     grid-column: 1 / -1;
-    /* font-size: 2rem; */
+    /* font-size: 2em; */
     font-weight: 500;
     color: var(--dark);
     padding: 0px;
@@ -73,7 +74,7 @@
     display: none;
     color: var(--dark);
     text-align: left;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 /* SKILLS */
@@ -107,7 +108,7 @@
 }
 
 .row-title-span-skills-list {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 500;
 }
 
