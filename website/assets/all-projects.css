@@ -1,82 +1,82 @@
 .current-project-row {
-    padding: var(--padding);
-    grid-column: 1 / -1;
+  padding: var(--padding);
+  grid-column: 1 / -1;
 }
 
 header h1.project-title {
-    font-size: 2em;
-    z-index: 20;
-    color: var(--light);
+  font-size: 2em;
+  z-index: 20;
+  color: var(--light);
 }
 
 .project-summary {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 ol {
-    list-style-type: decimal;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-row-gap: 15px;
-    line-height: 22px;
-    margin-bottom: 50px;
-    list-style-position: inside;
+  list-style-type: decimal;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-row-gap: 15px;
+  line-height: 25px;
+  margin-bottom: 50px;
+  list-style-position: inside;
 }
 
 .services-and-image {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    justify-content: flex-start;
-    gap: 50px;
-    align-content: start;
-    margin-bottom: 30px;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  justify-content: flex-start;
+  gap: 50px;
+  align-content: start;
+  margin-bottom: 30px;
 }
 
 .project-architecture-img img {
-    border: 1px solid var(--dark);
+  border: 1px solid var(--dark);
 }
 
 .services-used {
-    text-align: left;
-    display: grid;
-    grid-auto-rows: auto;
-    align-content: flex-start;
-    align-items: start;
-    gap: 10px;
+  text-align: left;
+  display: grid;
+  grid-auto-rows: auto;
+  align-content: flex-start;
+  align-items: start;
+  gap: 10px;
 }
 
 .row-title-span {
-    font-size: 1.5em;
-    font-weight: 500;
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
 .services-used-ul {
-    list-style-type: none;
-    display: grid;
-    grid-auto-rows: auto;
-    gap: 10px;
+  list-style-type: none;
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 10px;
 }
 
 .page-project-image-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: auto;
-    align-items: center;
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: auto;
+  align-items: center;
+  gap: 25px;
 }
 
 .page-project-image {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-auto-rows: auto;
-    cursor: pointer;
-    border: 1px solid var(--dark);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-auto-rows: auto;
+  cursor: pointer;
+  border: 1px solid var(--dark);
 }
 
 .page-project-image img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-    border-bottom: 1px solid var(--dark);
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid var(--dark);
 }
