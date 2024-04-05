@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simon Cull - CV</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Cull - CV</title>
 
-  <link rel="stylesheet" href="../assets/style.css">
-  <link rel="stylesheet" href="../assets/all-projects.css">
-  <link rel="stylesheet" href="project.css">
-  <link rel="stylesheet" href="../assets/responsive.css">
-</head>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/all-projects.css" />
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="../assets/responsive.css" />
+  </head>
   <body id="top">
     <header>
-      <img src="../assets/images/banner.jpg" alt="">
+      <img src="../assets/images/banner.jpg" alt="" />
       <div class="header-left">
         <h1 class="project-title">Two-Tier Architecture - Terraform</h1>
       </div>
@@ -28,7 +28,7 @@
         <div class="aside-section-content">
           <div class="aside-content-name-title">
             <h3>Simon Cull</h3>
-            <span>AWS Certified Security Professional</span>
+            <span>AWS Certified Professional</span>
           </div>
           <div class="content-div-container">
             <div id="content-div-1" class="content-div">
@@ -43,23 +43,15 @@
       <div id="section-2" class="section">
         <div class="aside-menu">
           <a href="../">
-            <div class="aside-menu-item" id="homeBtn">
-              Home
-            </div>
+            <div class="aside-menu-item" id="homeBtn">Home</div>
           </a>
-          <div class="aside-menu-item" id="projectsBtn">
-            Projects
-          </div>
-          <div class="aside-menu-item" id="topBtn">
-            Back to Top
-          </div>
+          <div class="aside-menu-item" id="projectsBtn">Projects</div>
+          <div class="aside-menu-item" id="topBtn">Back to Top</div>
         </div>
       </div>
       <div id="section-3" class="section">
         <div id="socialIcons"></div>
-        <div id="counter">
-          VIEW COUNT:<span id="counter-value"></span>
-        </div>
+        <div id="counter">VIEW COUNT:<span id="counter-value"></span></div>
       </div>
     </aside>
     <main>
@@ -67,7 +59,9 @@
         <img id="overlay-img" src="" alt="" />
         <div id="overlay-img-btns">
           <div id="overlay-img-btn-back" class="overlay-img-btn">&#8592;</div>
-          <div id="overlay-img-btn-forwards" class="overlay-img-btn">&#8594;</div>
+          <div id="overlay-img-btn-forwards" class="overlay-img-btn">
+            &#8594;
+          </div>
           <div id="overlay-img-btn-close" class="overlay-img-btn">CLOSE</div>
         </div>
       </div>
@@ -75,12 +69,12 @@
         <div class="current-project-row">
           <div class="text-passages">
             <p>
-              This is a two-tier architecture for deploying web applications
-              on AWS. This setup separates responsibilities between a
-              Presentation tier and a Data tier. This architecture is secure,
-              scalable and fault-tolerant. It also promotes separation of
-              concerns, making development and maintenance easier. In this
-              project, I built the architecture using Terraform.
+              This is a two-tier architecture for deploying web applications on
+              AWS. This setup separates responsibilities between a Presentation
+              tier and a Data tier. This architecture is secure, scalable and
+              fault-tolerant. It also promotes separation of concerns, making
+              development and maintenance easier. In this project, I built the
+              architecture using Terraform.
             </p>
             <p>
               The Presentation tier, or Web Server Tier handles user requests
@@ -108,9 +102,9 @@
             <li>
               <span>
                 I created a file named 'provider.tf'. It is here, in a
-                'providers' statement, that you define the provider you want
-                to use and you can configure its settings, such as the AWS
-                region you are working in.
+                'providers' statement, that you define the provider you want to
+                use and you can configure its settings, such as the AWS region
+                you are working in.
               </span>
               <div class="imgContTF">
                 <img src="project-images/1.png" alt="" />
@@ -121,12 +115,12 @@
               <span>
                 Next, I created a file with all of the network resources and
                 configurations. These resources included the VPC with a CIDR
-                block, then public subnets, configured to allow public IPs,
-                and private subnets, configured to not allow public IPs. Each
-                subnet has configurations for CIDRs and availability zones.
-                There is also an internet gateway, route tables and route
-                table associations. An Application Load Balancer and a target
-                group for it. And finally a subnet group for the RDS database.
+                block, then public subnets, configured to allow public IPs, and
+                private subnets, configured to not allow public IPs. Each subnet
+                has configurations for CIDRs and availability zones. There is
+                also an internet gateway, route tables and route table
+                associations. An Application Load Balancer and a target group
+                for it. And finally a subnet group for the RDS database.
               </span>
               <div class="twoImgContTF">
                 <img src="project-images/2.png" alt="" />
@@ -137,11 +131,11 @@
               <span>
                 I created a file for security configurations, including a
                 security group for EC2 instances and a security group for the
-                load balancer. The EC2 instance security group has inbound
-                rules on ports 80 for HTTP access from the internet, and port
-                22 for SSH access from your local machine. There was also a
-                security group for the MySQL database, allowing traffic
-                inbound and outbound on port 3306.
+                load balancer. The EC2 instance security group has inbound rules
+                on ports 80 for HTTP access from the internet, and port 22 for
+                SSH access from your local machine. There was also a security
+                group for the MySQL database, allowing traffic inbound and
+                outbound on port 3306.
               </span>
               <div class="twoImgContTF">
                 <img src="project-images/4.png" alt="" />
@@ -151,9 +145,9 @@
 
             <li>
               <span>
-                For the EC2 configuration file, I included the AMI ID of a
-                Linux instance. I included a bash script in the instance user
-                data, to install an NGINX web server on each of the instances.
+                For the EC2 configuration file, I included the AMI ID of a Linux
+                instance. I included a bash script in the instance user data, to
+                install an NGINX web server on each of the instances.
               </span>
               <div class="imgContTF">
                 <img src="project-images/6.png" alt="" />
@@ -163,8 +157,8 @@
               <span>
                 The Database configuration file includes the standard database
                 configuration, including options such as Storage Type, Engine,
-                username and password, and the DB subnet group configured in
-                the Network file.
+                username and password, and the DB subnet group configured in the
+                Network file.
               </span>
               <div class="imgContTF">
                 <img src="project-images/7.png" alt="" />
@@ -228,27 +222,34 @@
             <a href="../cloud-resume-challenge/index.html">
               <div class="project-container" id="project-container-1">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">Cloud Resume Challenge</div>
+                  <div class="project-container-image-title">
+                    Cloud Resume Challenge
+                  </div>
                   <div class="services-used-project">
-                    S3, CloudFront, GitHub, Lambda, Dynamo DB, Route 53, Terraform
+                    S3, CloudFront, GitHub, Lambda, Dynamo DB, Route 53,
+                    Terraform
                   </div>
                 </div>
               </div>
             </a>
             <!-- <a href="../two-tier-terraform/index.html"> -->
-              <div class="project-container" id="project-container-2">
-                <div class="project-container-image">
-                  <div class="project-container-image-title">Two-Tier Web Application Architecture built using Terraform</div>
-                  <div class="services-used-project">
-                    Terraform, EC2, Elastic Load Balancing, RDS
-                  </div>
+            <div class="project-container" id="project-container-2">
+              <div class="project-container-image">
+                <div class="project-container-image-title">
+                  Two-Tier Web Application Architecture built using Terraform
+                </div>
+                <div class="services-used-project">
+                  Terraform, EC2, Elastic Load Balancing, RDS
                 </div>
               </div>
+            </div>
             <!-- </a> -->
             <a href="../serverless-web-app/index.html">
               <div class="project-container" id="project-container-3">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">Serverless Web Application</div>
+                  <div class="project-container-image-title">
+                    Serverless Web Application
+                  </div>
                   <div class="services-used-project">
                     CodeCommit, Amplify, Cognito, Lambda, API Gateway, DynamoDB
                   </div>
@@ -258,7 +259,9 @@
             <a href="../three-tier-architecture/index.html">
               <div class="project-container" id="project-container-4">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">Three-Tier Web Application Architecture</div>
+                  <div class="project-container-image-title">
+                    Three-Tier Web Application Architecture
+                  </div>
                   <div class="services-used-project">
                     EC2, Auto Scaling, Elastic Load Balancing, RDS
                   </div>
@@ -268,10 +271,10 @@
             <a href="../s3-commands-cli/index.html">
               <div class="project-container" id="project-container-5">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">S3 Commands in the AWS Command Line Interface</div>
-                  <div class="services-used-project">
-                    S3, AWS CLI
+                  <div class="project-container-image-title">
+                    S3 Commands in the AWS Command Line Interface
                   </div>
+                  <div class="services-used-project">S3, AWS CLI</div>
                 </div>
               </div>
             </a>

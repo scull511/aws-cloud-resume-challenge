@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simon Cull - CV</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Cull - CV</title>
 
-  <link rel="stylesheet" href="../assets/style.css">
-  <link rel="stylesheet" href="../assets/all-projects.css">
-  <link rel="stylesheet" href="project.css">
-  <link rel="stylesheet" href="../assets/responsive.css">
-</head>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/all-projects.css" />
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="../assets/responsive.css" />
+  </head>
   <body id="top">
     <header>
-      <img src="../assets/images/banner.jpg" alt="">
+      <img src="../assets/images/banner.jpg" alt="" />
       <div class="header-left">
         <h1 class="project-title">Cloud Resume Challenge</h1>
       </div>
@@ -28,7 +28,7 @@
         <div class="aside-section-content">
           <div class="aside-content-name-title">
             <h3>Simon Cull</h3>
-            <span>AWS Certified Security Professional</span>
+            <span>AWS Certified Professional</span>
           </div>
           <div class="content-div-container">
             <div id="content-div-1" class="content-div">
@@ -43,23 +43,15 @@
       <div id="section-2" class="section">
         <div class="aside-menu">
           <a href="../">
-            <div class="aside-menu-item" id="homeBtn">
-              Home
-            </div>
+            <div class="aside-menu-item" id="homeBtn">Home</div>
           </a>
-          <div class="aside-menu-item" id="projectsBtn">
-            Projects
-          </div>
-          <div class="aside-menu-item" id="topBtn">
-            Back to Top
-          </div>
+          <div class="aside-menu-item" id="projectsBtn">Projects</div>
+          <div class="aside-menu-item" id="topBtn">Back to Top</div>
         </div>
       </div>
       <div id="section-3" class="section">
         <div id="socialIcons"></div>
-        <div id="counter">
-          VIEW COUNT:<span id="counter-value"></span>
-        </div>
+        <div id="counter">VIEW COUNT:<span id="counter-value"></span></div>
       </div>
     </aside>
     <main>
@@ -67,7 +59,9 @@
         <img id="overlay-img" src="" alt="" />
         <div id="overlay-img-btns">
           <div id="overlay-img-btn-back" class="overlay-img-btn">&#8592;</div>
-          <div id="overlay-img-btn-forwards" class="overlay-img-btn">&#8594;</div>
+          <div id="overlay-img-btn-forwards" class="overlay-img-btn">
+            &#8594;
+          </div>
           <div id="overlay-img-btn-close" class="overlay-img-btn">CLOSE</div>
         </div>
       </div>
@@ -76,21 +70,36 @@
         <div class="current-project-row">
           <div class="text-passages">
             <p class="project-summary">
-              The Cloud Resume Challenge is a hands-on project designed to help IT professionals showcase their cloud computing skills. By building a functional resume website entirely on cloud platforms, participants gain practical experience with these technologies while creating a unique and interactive resume that demonstrates their abilities to potential employers.
+              The Cloud Resume Challenge is a hands-on project designed to help
+              IT professionals showcase their cloud computing skills. By
+              building a functional resume website entirely on cloud platforms,
+              participants gain practical experience with these technologies
+              while creating a unique and interactive resume that demonstrates
+              their abilities to potential employers.
             </p>
             <p class="project-summary">
-              This website you are viewing is my attempt at the Cloud Resume Challenge. In building this, I leveraged various technologies and services, including AWS services such as S3, CloudFront, Lambda and DynamoDB; GitHub for source control and GitHub Actions to create a CI/CD Pipeline; and Terraform for Infrastructure as Code, to deploy resouces more efficiently and reliably.
+              This website you are viewing is my attempt at the Cloud Resume
+              Challenge. In building this, I leveraged various technologies and
+              services, including AWS services such as S3, CloudFront, Lambda
+              and DynamoDB; GitHub for source control and GitHub Actions to
+              create a CI/CD Pipeline; and Terraform for Infrastructure as Code,
+              to deploy resouces more efficiently and reliably.
             </p>
             <p class="project-summary">
-              This hands-on experience not only allowed me to build a unique and interactive online CV but also provided valuable insights into cloud architecture and best practices.
+              This hands-on experience not only allowed me to build a unique and
+              interactive online CV but also provided valuable insights into
+              cloud architecture and best practices.
             </p>
           </div>
 
           <div class="services-and-image">
             <div class="services-used">
-              <span class="row-title-span"> Tools, Languages & Services Used </span>
+              <span class="row-title-span">
+                Tools, Languages & Services Used
+              </span>
               <p>
-                HTML/CSS/JavaScript, S3, CloudFront, AWS Certificate Manager, Route 53, Lambda, Python, DynamoDB
+                HTML/CSS/JavaScript, S3, CloudFront, AWS Certificate Manager,
+                Route 53, Lambda, Python, DynamoDB
               </p>
             </div>
             <div class="project-architecture-img">
@@ -100,37 +109,87 @@
 
           <ol>
             <span>Here's an overview of the key areas I explored:</span>
-            <li>Website Development: I constructed the website's foundation using HTML, CSS, and JavaScript, laying the groundwork for a functional and visually appealing online presence.</li>
-            <li>Cloud Storage: To ensure secure and scalable file management, I used Amazon S3 for cloud-based storage of the website's assets.</li>
-            <li>Content Delivery Optimization: For enhanced website performance, I used Amazon CloudFront, a content delivery network that streamlines content delivery, providing a low latency connection. With CloudFront, you can also set an alternate domain name (CNAME) as the domain. In Amazon Route 53, I created a DNS record for this alternative domain name. The record routes traffic to the CloudFront distribution.</li>
-            <li>Prioritizing Security: I configured CloudFront to use HTTPS for security and used AWS Certificate Manager to obtain an SSL certificate, thereby encrypting data and safeguarding user information.</li>
-            <li>Tracking Website Traffic: To gain insights into user engagement, I created a DynamoDB table, a highly scalable database solution within the cloud environment. I then developed a Lambda function, written in Python, that tracks website visits and records them in the table.</li>
-            <li>Data Visualization Integration: To display the visitor count directly on the website, I used a JavaScript function. This function retrieved the view count from the Lambda function and presents it visually on the web page.</li>
-            <li>Version Control: For efficient code management, I established a GitHub repository, serving as a centralised repository for all website files.</li>
-            <li>Automated Deployments: Finally, I implemented a CI/CD pipeline through GitHub Actions. This streamlined approach automates website updates whenever code modifications are introduced, ensuring an efficient deployment process.</li>
-            <li>The Cloud Resume Challenge not only equipped me with valuable technical skills, it also gave me a stronger understanding of the practical applications of cloud technologies. This experience further strengthens my ability to adapt and thrive in dynamic technological environments.</li>
+            <li>
+              Website Development: I constructed the website's foundation using
+              HTML, CSS, and JavaScript, laying the groundwork for a functional
+              and visually appealing online presence.
+            </li>
+            <li>
+              Cloud Storage: To ensure secure and scalable file management, I
+              used Amazon S3 for cloud-based storage of the website's assets.
+            </li>
+            <li>
+              Content Delivery Optimization: For enhanced website performance, I
+              used Amazon CloudFront, a content delivery network that
+              streamlines content delivery, providing a low latency connection.
+              With CloudFront, you can also set an alternate domain name (CNAME)
+              as the domain. In Amazon Route 53, I created a DNS record for this
+              alternative domain name. The record routes traffic to the
+              CloudFront distribution.
+            </li>
+            <li>
+              Prioritizing Security: I configured CloudFront to use HTTPS for
+              security and used AWS Certificate Manager to obtain an SSL
+              certificate, thereby encrypting data and safeguarding user
+              information.
+            </li>
+            <li>
+              Tracking Website Traffic: To gain insights into user engagement, I
+              created a DynamoDB table, a highly scalable database solution
+              within the cloud environment. I then developed a Lambda function,
+              written in Python, that tracks website visits and records them in
+              the table.
+            </li>
+            <li>
+              Data Visualization Integration: To display the visitor count
+              directly on the website, I used a JavaScript function. This
+              function retrieved the view count from the Lambda function and
+              presents it visually on the web page.
+            </li>
+            <li>
+              Version Control: For efficient code management, I established a
+              GitHub repository, serving as a centralised repository for all
+              website files.
+            </li>
+            <li>
+              Automated Deployments: Finally, I implemented a CI/CD pipeline
+              through GitHub Actions. This streamlined approach automates
+              website updates whenever code modifications are introduced,
+              ensuring an efficient deployment process.
+            </li>
+            <li>
+              The Cloud Resume Challenge not only equipped me with valuable
+              technical skills, it also gave me a stronger understanding of the
+              practical applications of cloud technologies. This experience
+              further strengthens my ability to adapt and thrive in dynamic
+              technological environments.
+            </li>
           </ol>
 
-          <h4># TERRAFORM/SAM IMAGES #</h4>
+          <!-- <h4># TERRAFORM/SAM IMAGES #</h4> -->
         </div>
 
         <div class="projects-row" id="projects">
           <h3 class="sub-title-span">Projects</h3>
           <div class="projects-container">
             <!-- <a href=""> -->
-              <div class="project-container" id="project-container-1">
-                <div class="project-container-image">
-                  <div class="project-container-image-title">Cloud Resume Challenge</div>
-                  <div class="services-used-project">
-                    S3, CloudFront, GitHub, Lambda, Dynamo DB, Route 53, Terraform
-                  </div>
+            <div class="project-container" id="project-container-1">
+              <div class="project-container-image">
+                <div class="project-container-image-title">
+                  Cloud Resume Challenge
+                </div>
+                <div class="services-used-project">
+                  S3, CloudFront, GitHub, Lambda, Dynamo DB, Route 53, Terraform
                 </div>
               </div>
+            </div>
             <!-- </a> -->
             <a href="../two-tier-terraform/index.html">
               <div class="project-container" id="project-container-2">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">Two-Tier Web Application Architecture built using Terraform</div>
+                  <div class="project-container-image-title">
+                    Two-Tier Web Application Architecture built using Terraform
+                  </div>
                   <div class="services-used-project">
                     Terraform, EC2, Elastic Load Balancing, RDS
                   </div>
@@ -140,7 +199,9 @@
             <a href="../serverless-web-app/index.html">
               <div class="project-container" id="project-container-3">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">Serverless Web Application</div>
+                  <div class="project-container-image-title">
+                    Serverless Web Application
+                  </div>
                   <div class="services-used-project">
                     CodeCommit, Amplify, Cognito, Lambda, API Gateway, DynamoDB
                   </div>
@@ -150,7 +211,9 @@
             <a href="../three-tier-architecture/index.html">
               <div class="project-container" id="project-container-4">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">Three-Tier Web Application Architecture</div>
+                  <div class="project-container-image-title">
+                    Three-Tier Web Application Architecture
+                  </div>
                   <div class="services-used-project">
                     EC2, Auto Scaling, Elastic Load Balancing, RDS
                   </div>
@@ -160,10 +223,10 @@
             <a href="../s3-commands-cli/index.html">
               <div class="project-container" id="project-container-5">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">S3 Commands in the AWS Command Line Interface</div>
-                  <div class="services-used-project">
-                    S3, AWS CLI
+                  <div class="project-container-image-title">
+                    S3 Commands in the AWS Command Line Interface
                   </div>
+                  <div class="services-used-project">S3, AWS CLI</div>
                 </div>
               </div>
             </a>

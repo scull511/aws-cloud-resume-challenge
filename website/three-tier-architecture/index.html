@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simon Cull - CV</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Cull - CV</title>
 
-  <link rel="stylesheet" href="../assets/style.css">
-  <link rel="stylesheet" href="../assets/all-projects.css">
-  <link rel="stylesheet" href="project.css">
-  <link rel="stylesheet" href="../assets/responsive.css">
-</head>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/all-projects.css" />
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="../assets/responsive.css" />
+  </head>
   <body id="top">
     <header>
-      <img src="../assets/images/banner.jpg" alt="">
+      <img src="../assets/images/banner.jpg" alt="" />
       <div class="header-left">
         <h1 class="project-title">Three-Tier Web Application Architecture</h1>
       </div>
@@ -28,7 +28,7 @@
         <div class="aside-section-content">
           <div class="aside-content-name-title">
             <h3>Simon Cull</h3>
-            <span>AWS Certified Security Professional</span>
+            <span>AWS Certified Professional</span>
           </div>
           <div class="content-div-container">
             <div id="content-div-1" class="content-div">
@@ -43,23 +43,15 @@
       <div id="section-2" class="section">
         <div class="aside-menu">
           <a href="../">
-            <div class="aside-menu-item" id="homeBtn">
-              Home
-            </div>
+            <div class="aside-menu-item" id="homeBtn">Home</div>
           </a>
-          <div class="aside-menu-item" id="projectsBtn">
-            Projects
-          </div>
-          <div class="aside-menu-item" id="topBtn">
-            Back to Top
-          </div>
+          <div class="aside-menu-item" id="projectsBtn">Projects</div>
+          <div class="aside-menu-item" id="topBtn">Back to Top</div>
         </div>
       </div>
       <div id="section-3" class="section">
         <div id="socialIcons"></div>
-        <div id="counter">
-          VIEW COUNT:<span id="counter-value"></span>
-        </div>
+        <div id="counter">VIEW COUNT:<span id="counter-value"></span></div>
       </div>
     </aside>
     <main>
@@ -67,7 +59,9 @@
         <img id="overlay-img" src="" alt="" />
         <div id="overlay-img-btns">
           <div id="overlay-img-btn-back" class="overlay-img-btn">&#8592;</div>
-          <div id="overlay-img-btn-forwards" class="overlay-img-btn">&#8594;</div>
+          <div id="overlay-img-btn-forwards" class="overlay-img-btn">
+            &#8594;
+          </div>
           <div id="overlay-img-btn-close" class="overlay-img-btn">CLOSE</div>
         </div>
       </div>
@@ -78,27 +72,27 @@
           </h3> -->
           <div class="text-passages">
             <p class="project-summary">
-              This is a Three-Tier Architecture, containing a Presentation
-              tier, an Application tier and a Data tier. The presentation tier
+              This is a Three-Tier Architecture, containing a Presentation tier,
+              an Application tier and a Data tier. The presentation tier
               contains the user-facing elements. The application tier contains
               the back end, which would also contain the application code (not
-              present here). And the data tier, containg the application's
-              data, normally in the form of a database.
+              present here). And the data tier, containg the application's data,
+              normally in the form of a database.
             </p>
             <p class="project-summary">
-              A three-tier architecture makes the system more organised and
-              more easily maintainable. Each tier can be developed and scaled
+              A three-tier architecture makes the system more organised and more
+              easily maintainable. Each tier can be developed and scaled
               independently based on requirements. This architecture also
               provides increased security, the database can be isolated behind
               additional layers of security provided by the front end.
             </p>
             <p class="project-summary">
-              This architecture has high availability and fault tolerance
-              built into it as it is spread across different availability
-              zones, and it uses a load balancer and auto scaling. This means
-              disruption will be kept to a minimum by the automatic
-              provisioning of resources to ensure the application always has
-              the right amount of capacity to handle current demand.
+              This architecture has high availability and fault tolerance built
+              into it as it is spread across different availability zones, and
+              it uses a load balancer and auto scaling. This means disruption
+              will be kept to a minimum by the automatic provisioning of
+              resources to ensure the application always has the right amount of
+              capacity to handle current demand.
             </p>
           </div>
 
@@ -114,36 +108,64 @@
 
           <ol>
             <li>
-              VPC: Created across 2 Availability Zones, with public and private subnets for each tier.
+              VPC: Created across 2 Availability Zones, with public and private
+              subnets for each tier.
             </li>
             <li>
-              Public Subnets: Auto-assigned public IPv4 addresses for internet access via a public route table and internet gateway.
+              Public Subnets: Auto-assigned public IPv4 addresses for internet
+              access via a public route table and internet gateway.
             </li>
             <li>
-              NAT Gateways: Created in each Availability Zone for private subnet instances to access the internet (e.g. for updates and patches). Assigned an Elastic IP to each NAT Gateway.
+              NAT Gateways: Created in each Availability Zone for private subnet
+              instances to access the internet (e.g. for updates and patches).
+              Assigned an Elastic IP to each NAT Gateway.
             </li>
             <li>
-              Route Tables: Configured for each subnet. Public subnets with a route to an internet gateway, and private subnets with a route to the NAT Gateway.
+              Route Tables: Configured for each subnet. Public subnets with a
+              route to an internet gateway, and private subnets with a route to
+              the NAT Gateway.
             </li>
             <li>
-              Presentation Tier: Launched on EC2 instances (configured using a launch template) via an Auto Scaling Group with a Load Balancer distributing traffic. Security group allows SSH, HTTP, HTTPS. The instance user data contains a script which installs a web server, displaying some basic HTML.
-              <br><br>
-              The Auto Scaling Group can dynamically provision EC2 instances when needed across multiple availability zones in the public subnets. This ensures high availability and limits single points of failure. Here, I created a dynamic scaling policy which monitored CPU usage.
+              Presentation Tier: Launched on EC2 instances (configured using a
+              launch template) via an Auto Scaling Group with a Load Balancer
+              distributing traffic. Security group allows SSH, HTTP, HTTPS. The
+              instance user data contains a script which installs a web server,
+              displaying some basic HTML.
+              <br /><br />
+              The Auto Scaling Group can dynamically provision EC2 instances
+              when needed across multiple availability zones in the public
+              subnets. This ensures high availability and limits single points
+              of failure. Here, I created a dynamic scaling policy which
+              monitored CPU usage.
             </li>
             <li>
-              Application Tier: Similar setup to presentation tier, but with a bastion host for private internet access, and a connection to the database. Security group restricts public access but allows SSH/ICMP from presentation tier. Launched via Auto Scaling Group with an internal Load Balancer in private subnets.
+              Application Tier: Similar setup to presentation tier, but with a
+              bastion host for private internet access, and a connection to the
+              database. Security group restricts public access but allows
+              SSH/ICMP from presentation tier. Launched via Auto Scaling Group
+              with an internal Load Balancer in private subnets.
             </li>
             <li>
-              In the launch template instance user data, I entered a script to install the MySQL
-              package, to allow for later connection to the database in the data tier.
+              In the launch template instance user data, I entered a script to
+              install the MySQL package, to allow for later connection to the
+              database in the data tier.
             </li>
             <li>
-              Bastion Host: Created using an EC2 instance, in a public subnet, to allow for private connection to the internet, by authorized users, via SSH, using SSH Agent Forwarding.
+              Bastion Host: Created using an EC2 instance, in a public subnet,
+              to allow for private connection to the internet, by authorized
+              users, via SSH, using SSH Agent Forwarding.
             </li>
             <li>
-              Data Tier: Using Amazon RDS for MySQL with a database security group allowing connection from the application tier security group. I configured the inbound and outbound traffic to run to and from the servers running in the application tier, over port 3306.
-              <br><br>
-              Here, I created the RDS database in a single availability zone. For best practice you would enable Multi-AZ deployment, providing the database with high availability and automatic failover depending on configuration. You can then also create read replicas for more efficient read queries.
+              Data Tier: Using Amazon RDS for MySQL with a database security
+              group allowing connection from the application tier security
+              group. I configured the inbound and outbound traffic to run to and
+              from the servers running in the application tier, over port 3306.
+              <br /><br />
+              Here, I created the RDS database in a single availability zone.
+              For best practice you would enable Multi-AZ deployment, providing
+              the database with high availability and automatic failover
+              depending on configuration. You can then also create read replicas
+              for more efficient read queries.
             </li>
           </ol>
 
@@ -288,16 +310,19 @@
             </div>
           </div>
         </div>
-      
+
         <div class="projects-row" id="projects">
           <h3 class="sub-title-span">Projects</h3>
           <div class="projects-container">
             <a href="">
               <div class="project-container" id="project-container-1">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">Cloud Resume Challenge</div>
+                  <div class="project-container-image-title">
+                    Cloud Resume Challenge
+                  </div>
                   <div class="services-used-project">
-                    S3, CloudFront, GitHub, Lambda, Dynamo DB, Route 53, Terraform
+                    S3, CloudFront, GitHub, Lambda, Dynamo DB, Route 53,
+                    Terraform
                   </div>
                 </div>
               </div>
@@ -305,7 +330,9 @@
             <a href="../two-tier-terraform/index.html">
               <div class="project-container" id="project-container-2">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">Two-Tier Web Application Architecture built using Terraform</div>
+                  <div class="project-container-image-title">
+                    Two-Tier Web Application Architecture built using Terraform
+                  </div>
                   <div class="services-used-project">
                     Terraform, EC2, Elastic Load Balancing, RDS
                   </div>
@@ -315,7 +342,9 @@
             <a href="../serverless-web-app/index.html">
               <div class="project-container" id="project-container-3">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">Serverless Web Application</div>
+                  <div class="project-container-image-title">
+                    Serverless Web Application
+                  </div>
                   <div class="services-used-project">
                     CodeCommit, Amplify, Cognito, Lambda, API Gateway, DynamoDB
                   </div>
@@ -323,22 +352,24 @@
               </div>
             </a>
             <!-- <a href="../three-tier-architecture/index.html"> -->
-              <div class="project-container" id="project-container-4">
-                <div class="project-container-image">
-                  <div class="project-container-image-title">Three-Tier Web Application Architecture</div>
-                  <div class="services-used-project">
-                    EC2, Auto Scaling, Elastic Load Balancing, RDS
-                  </div>
+            <div class="project-container" id="project-container-4">
+              <div class="project-container-image">
+                <div class="project-container-image-title">
+                  Three-Tier Web Application Architecture
+                </div>
+                <div class="services-used-project">
+                  EC2, Auto Scaling, Elastic Load Balancing, RDS
                 </div>
               </div>
+            </div>
             <!-- </a> -->
             <a href="../s3-commands-cli/index.html">
               <div class="project-container" id="project-container-5">
                 <div class="project-container-image">
-                  <div class="project-container-image-title">S3 Commands in the AWS Command Line Interface</div>
-                  <div class="services-used-project">
-                    S3, AWS CLI
+                  <div class="project-container-image-title">
+                    S3 Commands in the AWS Command Line Interface
                   </div>
+                  <div class="services-used-project">S3, AWS CLI</div>
                 </div>
               </div>
             </a>

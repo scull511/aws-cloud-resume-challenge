@@ -1,126 +1,141 @@
 /* HOMEPAGE TITLE WITH SUBTITLE */
 .home-title-container {
-    z-index: 20;
-    display: grid;
-    grid-auto-rows: auto;
-    gap: 5px;
-    color: var(--light);
+  z-index: 20;
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 5px;
+  color: var(--light);
 }
 
 .home-title {
-    font-size: 2.5em;
-    text-align: center;
+  font-size: 2.5em;
+  text-align: center;
 }
 
 .home-sub-title {
-    text-align: center;
-    font-size: 0.75em;
+  text-align: center;
+  font-size: 0.8em;
 }
 
 /* ABOUT */
 .about-row {
-    padding: var(--padding);
-    grid-column: 1 / -1;
-}
-
-/* BADGES */
-.badges-row {
-    padding: var(--padding);
-    grid-column: 1 / -1;
-    border-top: 2px solid var(--mid);
-    background-color: var(--light);
-    display: grid;
-    grid-auto-rows: auto;
-    gap: 50px;
-}
-
-.badges-row-1, .badges-row-2 {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-}
-
-.badges-row-1 {
-    grid-template-columns: repeat(3, auto);
-}
-
-.badges-row-2 {
-    grid-template-columns: repeat(2, auto);
-}
-
-.badges-row .sub-title-span {
-    grid-column: 1 / -1;
-    /* font-size: 2em; */
-    font-weight: 500;
-    color: var(--dark);
-    padding: 0px;
-    padding-bottom: 25px;
-}
-
-.badge {
-    display: grid;
-    /* gap: 25px; */
-    grid-template-columns: auto;
-    align-items: center;
-    /* justify-content: flex-start; */
-}
-
-.badge img {
-    width: 175px;
-}
-
-.badge span {
-    display: none;
-    color: var(--dark);
-    text-align: left;
-    font-size: 1em;
+  padding: var(--padding);
+  padding: 50px 75px;
+  grid-column: 1 / -1;
 }
 
 /* SKILLS */
 .skills-row {
-    padding: var(--padding);
-    grid-column: 1 / -1;
-    border-top: 2px solid var(--mid);
-    background-color: var(--light);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;
-    gap: 25px;
-    grid-column-gap: 100px;
-    line-height: 25px;
+  /* padding: var(--padding); */
+  padding: 50px 75px;
+  grid-column: 1 / -1;
+  /* border-top: 2px solid var(--mid); */
+  background-color: var(--light);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 25px;
+  grid-column-gap: 100px;
+  line-height: 25px;
 }
 
 .skills-row .sub-title-span {
-    grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 .skills-list-col {
-    display: grid;
-    grid-auto-rows: auto;
-    gap: 25px;
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 25px;
 }
 
 .skills-collection {
-    display: grid;
-    grid-auto-rows: auto;
-    grid-row-gap: 10px;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-row-gap: 10px;
 }
 
 .row-title-span-skills-list {
-    font-size: 1.5em;
-    font-weight: 500;
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
 .skills-collection ul {
-    display: grid;
-    grid-auto-rows: auto;
-    grid-row-gap: 5px;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-row-gap: 5px;
+  /* list-style-type: none; */
+}
+
+/* EXPERIENCE */
+.experience-row {
+  padding: var(--padding);
+  grid-column: 1 / -1;
+  /* border-top: 2px solid var(--mid); */
+  background-color: var(--light);
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 25px;
+}
+
+/* BADGES */
+.badges-row {
+  padding: var(--padding);
+  grid-column: 1 / -1;
+  /* border-top: 2px solid var(--mid); */
+  background-color: var(--light);
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 50px;
+}
+
+.badges-row-1,
+.badges-row-2 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.badges-row-1 {
+  grid-template-columns: repeat(3, auto);
+}
+
+.badges-row-2 {
+  grid-template-columns: repeat(2, auto);
+}
+
+.badges-row .sub-title-span {
+  grid-column: 1 / -1;
+  /* font-size: 2em; */
+  font-weight: 500;
+  color: var(--dark);
+  padding: 0px;
+  padding-bottom: 25px;
+}
+
+.badge {
+  display: grid;
+  /* gap: 25px; */
+  grid-template-columns: auto;
+  align-items: center;
+  /* justify-content: flex-start; */
+}
+
+.badge img {
+  width: 175px;
+}
+
+.badge span {
+  display: none;
+  color: var(--dark);
+  text-align: left;
+  font-size: 1em;
 }
 
 #utv {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: black;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: black;
 }
