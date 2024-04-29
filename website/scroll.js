@@ -13,22 +13,29 @@ const skillsBtn = document.querySelector("#skillsBtn");
 const projects = document.querySelector("#projects");
 const projectsBtn = document.querySelector("#projectsBtn");
 
-aboutBtn.addEventListener("click", function() {
+const contact = document.querySelector("#contact");
+const contactBtn = document.querySelector("#contactBtn");
+
+aboutBtn.addEventListener("click", function () {
   about.scrollIntoView();
 });
 
-skillsBtn.addEventListener("click", function() {
+skillsBtn.addEventListener("click", function () {
   skills.scrollIntoView();
 });
 
-experienceBtn.addEventListener("click", function() {
+experienceBtn.addEventListener("click", function () {
   experience.scrollIntoView();
 });
 
-badgesBtn.addEventListener("click", function() {
+badgesBtn.addEventListener("click", function () {
   badges.scrollIntoView();
 });
 
-projectsBtn.addEventListener("click", function() {
+projectsBtn.addEventListener("click", function () {
   projects.scrollIntoView();
+});
+
+contactBtn.addEventListener("click", function () {
+  contact.scrollIntoView();
 });

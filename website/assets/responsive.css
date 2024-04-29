@@ -1,23 +1,26 @@
 @media only screen and (max-width: 1200px) {
   aside #section-1 .aside-section-content h3 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   aside #section-1 .aside-section-content span {
-    font-size: 0.5em;
+    font-size: 0.5rem;
   }
 
   .aside-section-content .content-div {
     padding: 10px 0;
     width: 100%;
   }
+  .badges-container {
+    grid-template-columns: 1fr;
+  }
 
   #counter {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 
   .aside-section-content .content-div a {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 
   .aside-menu-item {
@@ -25,12 +28,12 @@
     height: 100%;
     /* width: 200px; */
     cursor: pointer;
-    font-size: 0.75em;
+    font-size: 0.75rem;
   }
 
-  .badge img {
+  /* .badge img {
     width: 125px;
-  }
+  } */
 
   .header-title-container {
     /* margin-left: 50px; */
@@ -73,27 +76,27 @@
     position: sticky;
     top: 0;
     left: 0;
-    min-height: 120px;
+    min-height: 100px;
   }
 
   .header-title-container h1 {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .header-title-container span {
-    font-size: 0.75em;
+    font-size: 0.75rem;
   }
 
   .home-title {
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .home-sub-title {
-    font-size: 0.6em;
+    font-size: 0.6rem;
   }
 
   header h1.project-title {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   aside {
@@ -122,17 +125,28 @@
     --padding: 40px 30px;
   }
 
-  .sub-title-span {
-    font-size: 2em;
-  }
-  .badges-row {
-    gap: 25px;
+  html {
+    font-size: 14px;
   }
 
-  .badges-row-1,
-  .badges-row-2 {
-    gap: 25px;
+  .sub-title-span {
+    font-size: 1.2rem;
   }
+
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-height: 80px;
+  }
+  /* .badges-row {
+    gap: 25px;
+  } */
+
+  /* .badges-row-1 {
+    gap: 26px;
+    grid-template-columns: repeat(2, auto);
+  } */
 
   .imgContTF img {
     width: 80%;
@@ -157,21 +171,21 @@
   }
 
   .header-title-container-contact > a {
-    font-size: 0.65em;
+    font-size: 0.65rem;
   }
 
-  .badges-row {
+  /* .badges-row {
     gap: 10px;
-  }
+  } */
 
-  .badges-row-1,
+  /* .badges-row-1,
   .badges-row-2 {
     gap: 10px;
-  }
+  } */
 
-  .badge img {
+  /* .badge img {
     width: 125px;
-  }
+  } */
 
   .imgContTF img {
     width: 90%;
@@ -184,8 +198,8 @@
 
 @media only screen and (max-width: 480px) {
   header {
-    min-height: 100px;
-    padding: 0 15px;
+    min-height: 70px;
+    padding: 10px 15px;
   }
 
   .header-title-container {
@@ -198,47 +212,52 @@
   }
 
   .header-title-container h1 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   .header-title-container span {
-    font-size: 0.6em;
+    font-size: 0.6rem;
   }
 
   .home-title {
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 
   .home-sub-title {
-    font-size: 0.38em;
+    font-size: 0.38rem;
   }
 
   .header-title-container-contact > a {
-    font-size: 0.6em;
+    font-size: 0.6rem;
   }
 
   header h1.project-title {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 
-  .badges-row {
+  /* .badges-row {
     padding-left: 15px;
     padding-right: 15px;
     gap: 5px;
-  }
+  } */
+
+  /* .badges-row-1,
+  .badges-row-2 {
+    gap: 5px;
+  } */
+
+  /* .badge img {
+    width: 100px;
+  } */
 
   .badges-row-1,
   .badges-row-2 {
-    gap: 5px;
-  }
-
-  .badge img {
-    width: 100px;
+    grid-template-columns: 1fr;
   }
 
   #projects {
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
   }
 
   .imgContTF img {
@@ -252,11 +271,11 @@
 
 @media only screen and (max-width: 320px) {
   .header-title-container h1 {
-    font-size: 0.9em;
+    font-size: 0.9rem;
   }
 
   .header-title-container span {
-    font-size: 0.4em;
+    font-size: 0.4rem;
   }
 
   .header-title-container-contact {
@@ -264,10 +283,10 @@
   }
 
   .header-title-container-contact > a {
-    /* font-size: 0.65em; */
+    /* font-size: 0.65rem; */
   }
 
-  .badge img {
+  /* .badge img {
     width: 75px;
-  }
+  } */
 }

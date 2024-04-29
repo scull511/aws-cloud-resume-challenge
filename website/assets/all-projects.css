@@ -4,7 +4,7 @@
 }
 
 header h1.project-title {
-  font-size: 2em;
+  font-size: 2rem;
   z-index: 20;
   color: var(--light);
 }
@@ -46,7 +46,7 @@ ol {
 }
 
 .row-title-span {
-  font-size: 1.5em;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
