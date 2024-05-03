@@ -17,7 +17,7 @@ async function updateCounter() {
   counterValue.innerHTML = ` ${value.toLocaleString()}`;
 }
 
-// updateCounter();
+updateCounter();
 
 // CONTACT FORM
 let formConfirmationMsg = document.getElementById("form-confirmation-msg");
