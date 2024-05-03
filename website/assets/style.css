@@ -135,8 +135,8 @@ header img {
 
 /* PROJECTS */
 .projects-row {
-  padding: var(--padding);
-  /* padding: 50px 20px; */
+  padding: 50px 2.5vw;
+  /* padding: 50px 5vw; */
   grid-column: 1 / -1;
   /* border-top: 2px solid var(--mid); */
   background-color: var(--light);
@@ -153,7 +153,8 @@ header img {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
+  /* grid-template-columns: repeat(auto-fit, minmax(auto, 300px)); */
+  grid-template-columns: repeat(auto-fill, minmax(250px, auto));
   /* grid-template-columns: repeat(auto-fill, minmax(300px, auto)); */
   grid-auto-rows: 300px;
   grid-auto-rows: auto;
@@ -201,17 +202,17 @@ header img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
   font-weight: 400;
   padding: 20px;
   height: 100%;
+  font-size: 1rem;
 }
 
 .services-used-project {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 400;
   color: var(--light);
   padding: 10px;
@@ -233,84 +234,8 @@ header img {
   height: auto;
 }
 
-/* CONTACT FORM */
-#contact {
-  /* padding: 25px; */
-  gap: 25px;
-  display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: 1fr;
-}
-
-label {
-  text-align: left;
-}
-
 #contact-section {
   /* padding: 50px; */
-}
-
-#contact-form {
-  padding-top: 25px;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-  display: grid;
-  gap: 10px;
-}
-
-input,
-textarea {
-  background-color: #fdfdfd;
-  outline: none;
-  border: 1px solid #ccc;
-  border-radius: 2.5px;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border: 1px solid #000;
-}
-
-input,
-textarea,
-button {
-  padding: 10px;
-  font-size: 1.2rem;
-  max-width: 100%;
-}
-
-#form-name {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-  gap: 15px;
-}
-
-#form-name div {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto;
-  gap: 10px;
-}
-
-textarea {
-  resize: vertical;
-}
-
-button {
-  cursor: pointer;
-  background-color: #eee;
-  padding: 15px;
-  border: 1px solid #ccc;
-  color: #000;
-  border-radius: 2.5px;
-}
-
-button:hover {
-  background-color: #ddd;
-  border: 1px solid #000;
 }
 
 /* SIDEBAR */

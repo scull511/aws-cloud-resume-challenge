@@ -1,0 +1,80 @@
+/* CONTACT FORM */
+#contact {
+  /* padding: 25px; */
+  gap: 25px;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr;
+}
+
+label {
+  text-align: left;
+}
+
+#contact-form {
+  padding-top: 25px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+}
+
+#form-confirmation-msg {
+  padding-top: 20px;
+  text-align: center;
+}
+
+input,
+textarea {
+  background-color: #fdfdfd;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 2.5px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #000;
+}
+
+input,
+textarea,
+button {
+  padding: 10px;
+  font-size: 1.2rem;
+  max-width: 100%;
+}
+
+#form-name {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 15px;
+}
+
+#form-name div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  gap: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  cursor: pointer;
+  background-color: #eee;
+  padding: 15px;
+  border: 1px solid #ccc;
+  color: #000;
+  border-radius: 2.5px;
+}
+
+button:hover {
+  background-color: #ddd;
+  border: 1px solid #000;
+}

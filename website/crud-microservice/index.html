@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Cull - CV</title>
+
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/all-projects.css" />
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="../assets/responsive.css" />
+  </head>
+  <body id="top">
+    <header>
+      <img src="../assets/images/banner.jpg" alt="" />
+      <div class="header-left">
+        <h1 class="project-title">CRUD Microservice</h1>
+      </div>
+      <div class="header-right">
+        <div class="header-title-container-contact">
+          <a href="tel:+447974410248"> 07974 410248 </a>
+          <a href="mailto:simoncull@gmail.com"> simoncull@gmail.com </a>
+        </div>
+      </div>
+    </header>
+    <aside>
+      <div id="section-1" class="section">
+        <div class="aside-section-content">
+          <div class="aside-content-name-title">
+            <h3>Simon Cull</h3>
+            <span>AWS Certified Professional</span>
+          </div>
+          <div class="content-div-container">
+            <div id="content-div-1" class="content-div">
+              <a href="tel:+447974410248"> 07974 410248 </a>
+            </div>
+            <div id="content-div-2" class="content-div">
+              <a href="mailto:simoncull@gmail.com"> simoncull@gmail.com </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="section-2" class="section">
+        <div class="aside-menu">
+          <a href="../">
+            <div class="aside-menu-item" id="homeBtn">Home</div>
+          </a>
+          <div class="aside-menu-item" id="projectsBtn">Projects</div>
+          <div class="aside-menu-item" id="topBtn">Back to Top</div>
+        </div>
+      </div>
+      <div id="section-3" class="section">
+        <div id="socialIcons"></div>
+        <div id="counter">VIEW COUNT:<span id="counter-value"></span></div>
+      </div>
+    </aside>
+    <main>
+      <div id="overlay">
+        <img id="overlay-img" src="" alt="" />
+        <div id="overlay-img-btns">
+          <div id="overlay-img-btn-back" class="overlay-img-btn">&#8592;</div>
+          <div id="overlay-img-btn-forwards" class="overlay-img-btn">
+            &#8594;
+          </div>
+          <div id="overlay-img-btn-close" class="overlay-img-btn">CLOSE</div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="current-project-row">
+          <div class="text-passages">
+            <p class="project-summary"></p>
+            <p class="project-summary"></p>
+            <p class="project-summary"></p>
+          </div>
+
+          <form id="crud-form">
+            <div id="section-1" class="section">
+              <div>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required />
+              </div>
+              <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div>
+                <button type="submit">Submit</button>
+              </div>
+              <div>
+                <button type="submit">List</button>
+              </div>
+            </div>
+            <!-- <span id="form-confirmation-msg"></span> -->
+
+            <div id="section-2" class="section">
+              <div class="list">
+                <ul></ul>
+              </div>
+              <div>
+                <button type="submit">Edit/Delete</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="services-and-image">
+            <div class="services-used">
+              <span class="row-title-span">
+                Tools, Languages & Services Used
+              </span>
+              <p>API Gateway, Lambda, DynamoDB</p>
+            </div>
+            <div class="project-architecture-img">
+              <img src="microservice.png" alt="" />
+            </div>
+          </div>
+
+          <ol>
+            <span></span>
+            <li></li>
+          </ol>
+
+          <!-- <h4># TERRAFORM/SAM IMAGES #</h4> -->
+        </div>
+
+        <div class="projects-row" id="projects">
+          <h3 class="sub-title-span">Projects</h3>
+          <div class="projects-container">
+            <!-- <a href=""> -->
+            <div class="project-container" id="project-container-1">
+              <div class="project-container-image">
+                <div class="project-container-image-title">
+                  Cloud Resume Challenge
+                </div>
+                <div class="services-used-project">
+                  S3, CloudFront, GitHub, Lambda, Dynamo DB, Route 53, Terraform
+                </div>
+              </div>
+            </div>
+            <!-- </a> -->
+            <a href="../two-tier-terraform/index.html">
+              <div class="project-container" id="project-container-2">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">
+                    Two-Tier Web Application Architecture built using Terraform
+                  </div>
+                  <div class="services-used-project">
+                    Terraform, EC2, Elastic Load Balancing, RDS
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../serverless-web-app/index.html">
+              <div class="project-container" id="project-container-3">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">
+                    Serverless Web Application
+                  </div>
+                  <div class="services-used-project">
+                    CodeCommit, Amplify, Cognito, Lambda, API Gateway, DynamoDB
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../three-tier-architecture/index.html">
+              <div class="project-container" id="project-container-4">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">
+                    Three-Tier Web Application Architecture
+                  </div>
+                  <div class="services-used-project">
+                    EC2, Auto Scaling, Elastic Load Balancing, RDS
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="../s3-commands-cli/index.html">
+              <div class="project-container" id="project-container-5">
+                <div class="project-container-image">
+                  <div class="project-container-image-title">
+                    S3 Commands in the AWS Command Line Interface
+                  </div>
+                  <div class="services-used-project">S3, AWS CLI</div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer-content">
+        <div id="copyright-and-year"></div>
+        <div id="built-by">
+          WEBSITE<br />DESIGNED & BUILT<br />BY SIMON CULL
+        </div>
+      </div>
+    </footer>
+    <script src="../main.js"></script>
+    <script src="images.js"></script>
+    <script src="scroll.js"></script>
+  </body>
+</html>
