@@ -77,12 +77,12 @@
           <form id="crud-form">
             <div id="section-1" class="section">
               <div>
-                <label for="id">ID:</label>
-                <input type="text" id="id" name="id" required />
-              </div>
-              <div>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required />
+              </div>
+              <div>
+                <label for="color">Favourite Colour:</label>
+                <input type="text" id="color" name="color" required />
               </div>
               <div>
                 <button type="submit">Submit</button>
@@ -111,7 +111,7 @@
               <p>API Gateway, Lambda, DynamoDB</p>
             </div>
             <div class="project-architecture-img">
-              <img src="microservice.png" alt="" />
+              <!-- <img src="microservice.png" alt="" /> -->
             </div>
           </div>
 
@@ -186,6 +186,37 @@
             </a>
           </div>
         </div>
+
+        <div id="contact" class="contact-row">
+          <h3 class="sub-title-span">Contact</h3>
+          <div class="section" id="contact-section">
+            <form id="contact-form">
+              <div id="form-name">
+                <div id="first-name-cont">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+              </div>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" required />
+
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+              ></textarea>
+
+              <button type="submit">Submit</button>
+              <span id="form-confirmation-msg"></span>
+            </form>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
@@ -199,5 +230,6 @@
     <script src="../main.js"></script>
     <script src="images.js"></script>
     <script src="scroll.js"></script>
+    <script src="crud.js"></script>
   </body>
 </html>

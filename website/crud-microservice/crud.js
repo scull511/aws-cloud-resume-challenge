@@ -1,31 +1,33 @@
 document
-  .getElementById("contact-form")
+  .getElementById("crud-form")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
+    // event.preventDefault(); // Prevent form submission
 
     // Validate form inputs
-    var id = document.getElementById("id").value.trim();
     var name = document.getElementById("name").value.trim();
+    var color = document.getElementById("color").value.trim();
 
-    if (!id || !name) {
+    if (!name || !color) {
       alert("Please fill in all fields with valid inputs.");
       return;
     }
 
     // Construct the form data
     var formData = {
-      id: id,
       name: name,
+      color: color,
     };
 
     // Perform form submission
+    console.log(formData);
     submitForm(formData);
   });
 
 function submitForm(formData) {
   // Make an API request to the backend (API Gateway) for form submission
   //   fetch("https://oojb7uz8p9.execute-api.us-east-1.amazonaws.com/dev/submit", {
-  fetch("https://oojb7uz8p9.execute-api.us-east-1.amazonaws.com/dev/submit", {
+  // fetch("https://oojb7uz8p9.execute-api.us-east-1.amazonaws.com/dev/submit", {
+  fetch("https://1qzl8j04kb.execute-api.us-east-1.amazonaws.com/Prod", {
     // URL that represents the backend API endpoint to which the form data is going to be sent
     method: "POST",
     headers: {
@@ -37,7 +39,7 @@ function submitForm(formData) {
       if (response.ok) {
         // Redirect to the thank you page
         // window.location.href = "thank-you.html";
-        alert("Message delivvered, thank you.");
+        alert("Message delivered, thank you.");
       } else {
         throw new Error("Form submission failed.");
       }
