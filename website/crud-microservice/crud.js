@@ -4,17 +4,17 @@ document
     // event.preventDefault(); // Prevent form submission
 
     // Validate form inputs
-    var name = document.getElementById("name").value.trim();
+    var id = document.getElementById("id").value.trim();
     var color = document.getElementById("color").value.trim();
 
-    if (!name || !color) {
+    if (!id || !color) {
       alert("Please fill in all fields with valid inputs.");
       return;
     }
 
     // Construct the form data
     var formData = {
-      name: name,
+      id: id,
       color: color,
     };
 
