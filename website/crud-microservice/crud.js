@@ -7,7 +7,7 @@ document
     var name = document.getElementById("name").value.trim();
     var age = document.getElementById("age").value.trim();
 
-    if (!id || !color) {
+    if (!name || !age) {
       alert("Please fill in all fields with valid inputs.");
       return;
     }
