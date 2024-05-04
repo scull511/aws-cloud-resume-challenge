@@ -1,18 +1,18 @@
 const AWS = require("aws-sdk");
 const dynamodb = new AWS.DynamoDB.DocumentClient();
-const { v4: uuidv4 } = require("uuid");
+// const { v4: uuidv4 } = require("uuid");
 
 exports.handler = async (event) => {
   try {
     console.log("Raw input data:", event); // Add this line to log the raw input data
 
     const formData = {
-      name: event.name,
+      id: event.id,
       color: event.color,
     };
 
     const item = {
-      SubmissionId: generateUUID(), // Generate a UUID
+      // SubmissionId: generateUUID(), // Generate a UUID
       ...formData, // Use the form data as attributes
     };
 
@@ -41,6 +41,6 @@ async function storeFormData(item) {
   await dynamodb.put(params).promise();
 }
 
-function generateUUID() {
-  return uuidv4();
-}
+// function generateUUID() {
+//   return uuidv4();
+// }
