@@ -1,19 +1,38 @@
 .project-architecture-img img {
-  padding: 20px;
+  /* padding: 20px; */
   background-color: #fff;
-  width: 400px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
 }
 
-#crud-form {
-  padding-top: 0px;
-  /* width: 100%; */
-  /* max-width: 500px; */
-  margin: 0 auto;
+ol {
   display: grid;
+  grid-auto-rows: auto;
+  grid-row-gap: 15px;
+  line-height: 25px;
+  margin-bottom: 50px;
+  /* list-style-type: decimal; */
+  list-style-position: inside;
+  list-style-type: decimal-leading-zero;
+  list-style-type: none; /* did this and added numbers as it wasn't working */
+}
+
+ol li {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-auto-rows: auto;
   gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 100px;
+}
+
+.imgCont {
+  background-color: #f9f9f9;
+}
+
+ol li .imgCont img {
+  max-height: 350px;
+  /* max-width: 300px; */
+  /* width: 100%; */
+  padding: 15px;
 }
 
 button {

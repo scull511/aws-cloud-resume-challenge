@@ -69,58 +69,169 @@
       <div class="container">
         <div class="current-project-row">
           <div class="text-passages">
-            <p class="project-summary"></p>
-            <p class="project-summary"></p>
-            <p class="project-summary"></p>
+            <p class="project-summary">
+              Built a serverless CRUD API microservice on AWS for scalable data
+              management. This project uses API Gateway as an interface for API
+              requests. Behind the scenes, API Gateway triggers an AWS Lambda
+              function written in Python to perform Create, Read, Update and
+              Delete operations on data stored in DynamoDB. This serverless
+              architecture ensures cost-efficiency as resources are only
+              provisioned when the API is in use.
+            </p>
+            <p class="project-summary">
+              To demonstrate functionality, I used Postman for API testing. By
+              constructing and executing CRUD requests through Postman, I
+              verified the API's ability to interact with DynamoDB tables for
+              data manipulation.
+            </p>
+            <p class="project-summary">
+              As a microservice, it is largely independent of other components
+              in an application. Through loose coupling it can be scaled,
+              maintained and updated based on its own requirements, with minimal
+              impact on an application. It is easily transferable, and could be
+              used on a variety of data such as users, products and orders.
+            </p>
           </div>
-
-          <form id="crud-form">
-            <div id="section-1" class="section">
-              <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div>
-                <label for="age">Age:</label>
-                <input type="text" id="age" name="age" required />
-              </div>
-              <div>
-                <button type="submit">Submit</button>
-              </div>
-              <div>
-                <button type="submit">List</button>
-              </div>
-            </div>
-            <!-- <span id="form-confirmation-msg"></span> -->
-
-            <div id="section-2" class="section">
-              <div class="list">
-                <ul></ul>
-              </div>
-              <div>
-                <button type="submit">Edit/Delete</button>
-              </div>
-            </div>
-          </form>
 
           <div class="services-and-image">
             <div class="services-used">
               <span class="row-title-span">
                 Tools, Languages & Services Used
               </span>
-              <p>API Gateway, Lambda, DynamoDB</p>
+              <p>API Gateway, Lambda, DynamoDB, Postman</p>
             </div>
             <div class="project-architecture-img">
-              <!-- <img src="microservice.png" alt="" /> -->
+              <img src="microservice.png" alt="" />
             </div>
           </div>
 
           <ol>
-            <span></span>
-            <li></li>
+            <li>
+              <span
+                >1. Using IAM, created a Lambda execution role for the function,
+                with a policy that granted the function permission to access
+                CloudWatch and DynamoDB - CloudWatch to create log files, and
+                DynamoDB to perform CRUD operations.</span
+              >
+              <div class="imgCont">
+                <img src="images/01.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span>
+                2. Created the Lambda function, written in Python. The function
+                uses Boto3, the AWS SDK for Python, to work with DynamoDB. When
+                the Lambda function is triggered, the event object contains
+                information about the payload, e.g. the key-value to be created
+                in the DynamoDB table; the table name; the operation to be
+                performed.
+              </span>
+              <div class="imgCont">
+                <img src="images/02.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span>3. Created the DynamoDB table to store the data. </span>
+              <div class="imgCont">
+                <img src="images/03.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span>4. Created a REST API using API Gateway.</span>
+              <div class="imgCont">
+                <img src="images/04.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span>5. Added a resource and POST method to the API.</span>
+              <div class="imgCont">
+                <img src="images/05.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span
+                >6. The POST method integrates with the Lambda function.</span
+              >
+              <div class="imgCont">
+                <img src="images/06.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span
+                >7. Created a stage named 'prod' for the API. The invoke URL,
+                containing the stage name and resource name is what is used in
+                Postman for testing, or would be used in a frontend application
+                interface to make the create/read/update/delete calls to the
+                API.</span
+              >
+              <div class="imgCont">
+                <img src="images/07.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span
+                >8. CREATE - Using Postman, made two PUT requests to the invoke
+                URL, to create an item of data, two times.</span
+              >
+              <div class="imgCont">
+                <img src="images/08.png" alt="" />
+              </div>
+              <div class="imgCont">
+                <img src="images/09.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span
+                >9. HTTP status code of 200 indicating a successful
+                request.</span
+              >
+              <div class="imgCont">
+                <img src="images/10.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span>10. Performing a table scan shows the two items.</span>
+              <div class="imgCont">
+                <img src="images/11.png" alt="" />
+              </div>
+              <div class="imgCont">
+                <img src="images/12.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span
+                >11. READ - Using Postman, making a GET request to the invoke
+                URL to read an item of data.</span
+              >
+              <div class="imgCont">
+                <img src="images/13.png" alt="" />
+              </div>
+              <div class="imgCont">
+                <img src="images/14.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span
+                >12. UPDATE - Using Postman, making a PUT request to the invoke
+                URL to update an item of data.</span
+              >
+              <div class="imgCont">
+                <img src="images/15.png" alt="" />
+              </div>
+              <div class="imgCont">
+                <img src="images/16.png" alt="" />
+              </div>
+            </li>
+            <li>
+              <span
+                >13. DELETE - Using Postman, making a DELETE request to the
+                invoke URL to delete an item of data.</span
+              >
+              <div class="imgCont">
+                <img src="images/17.png" alt="" />
+              </div>
+            </li>
           </ol>
-
-          <!-- <h4># TERRAFORM/SAM IMAGES #</h4> -->
         </div>
 
         <div class="projects-row" id="projects">
